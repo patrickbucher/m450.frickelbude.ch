@@ -17,5 +17,5 @@ Beim Testen haben sich in den letzten Jahrzehnten die folgenden Grundsätze etab
 ## Fragen
 
 1. Warum kann man durch Testen nicht beweisen, dass eine Software fehlerfrei ist?
-2. Warum ist eine nicht-triviales nicht vollständig testbar?
+2. Warum ist eine nicht-triviale Software nicht vollständig testbar?
 
