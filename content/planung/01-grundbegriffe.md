@@ -14,14 +14,14 @@ Sie wissen, was in diesem Semester auf Sie zukommt und können einige Grundbegri
 ### Lektion 1
 
 - [15 min.] Begrüssung und Semesterplan
-- [15 min.] Testen der Beispielanwendung
+- [15 min.] Testen der Beispielanwendung [Unit Converter](/unit-converter)
 - [15 min.] Präsentation der Testergebnisse
 
 ### Lektion 2
 
-- [15 min.] Der Testbegriff: Lektüre und Fragen
-- [15 min.] Der Fehlerbegriff: Lektüre und Fragen
-- [15 min.] Grundsätze des Testens: Lektüre und Fragen
+- [15 min.] [Der Testbegriff](/theorie/testbegriff): Lektüre und Fragen
+- [15 min.] [Der Fehlerbegriff](/theorie/fehlerbegriff): Lektüre und Fragen
+- [15 min.] [Grundsätze des Testens](/theorie/grundsaetze): Lektüre und Fragen
 
 ### Hausaufgabe
 
