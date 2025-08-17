@@ -1,6 +1,9 @@
 const conversions = [
   [["km", "mi"], 0.62137119],
   [["m", "ft"], 3.2808399],
+  [["ft", "m"], 1.0 / 3.2808399],
+  [["l", "oz"], 33.8140227],
+  [["kg", "lbs"], 0.45359237],
 ];
 const fillWithUnits = (dropdown, units) => {
   units.forEach((unit) => {
