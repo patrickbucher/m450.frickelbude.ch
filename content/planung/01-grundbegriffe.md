@@ -1,6 +1,7 @@
 +++
 date = '2025-08-17T17:34:01+02:00'
 title = 'Block 1: Grundbegriffe'
+weight = 1
 +++
 
 Im ersten Block verschaffen wir uns zunächst einen Überblick über das Modul 450. Anschliessend testen wir eine kleine Beispielanwendung und halten unsere Testergebnisse dazu fest. Nachdem wir einige Grundbegriffe zum Testen geklärt haben, ordnen wir diese Testergebnisse ein und betrachten uns zum Schluss einige Grundbegriffe zum Testen.
