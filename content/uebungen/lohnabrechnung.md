@@ -14,5 +14,6 @@ Zur Umsetzung wurden für die Abzüge folgende Anforderungen festgelegt:
 
 ## Aufgaben
 
-1. Entwerfe je drei abstrakte und konkrete Testfälle um die Anwendung so gut wie möglich zu testen. Halte pro Testfall die relevanten Eingabedaten (bzw. Regeln dafür) und die erwarteten Ergebnisse fest.
-2. Führe die Testfälle durch und halte die Ergebnisse in einem Testprotokoll fest.
+1. Überlege dir einige Testziele zur gegebenen Testbasis.
+2. Entwerfe je drei abstrakte und konkrete Testfälle um die Anwendung so gut wie möglich zu testen. Halte pro Testfall die relevanten Eingabedaten (bzw. Regeln dafür) und die erwarteten Ergebnisse fest.
+3. Führe die Testfälle am Testobjekt durch und halte die Ergebnisse in einem Testprotokoll fest.
