@@ -26,7 +26,7 @@ Im _Testfortschrittsbericht_ wird der Testfortschritt im Vergleich zur Planung a
 
 ## Testanalyse
 
-Hier wird ermittelt, _was_ zu testen ist. Dazu werden aus der Testbasis testbare Merkmale des Testobjekts ermittelt und daraus _Testbedingungen_ abgeleitet. Dabei orientiert man sich am gefordeten _Überdeckungsgrad_ (_Wie viel muss abgedeckt werden?_) und an den Risiken (_Wie soll priorisiert werden?_).
+Hier wird ermittelt, _was_ zu testen ist. Dazu werden aus der Testbasis testbare Merkmale des Testobjekts ermittelt und daraus _Testbedingungen_ abgeleitet. Dabei orientiert man sich am gefordeten Überdeckungsgrad (_Wie viel muss abgedeckt werden?_) und an den Risiken (_Wie soll priorisiert werden?_).
 
 Die Testbasis soll hierzu genau überprüft werden, denn aus einer fehlerhaften oder widersprüchlichen Testbasis können keine sinnvollen Testbedingungen abgeleitet werden. Die durchzuführenden Tests müssen dann nachweisen, ob das Testobjekt diese Bedingungen erfüllt. Das Testobjekt muss über eine diesen Tests zugängliche Schnittstelle verfügen.
 
@@ -34,7 +34,7 @@ Es muss zwecks Nachverfolgbarkeit _bidirektional_ festgehalten werden, welche Te
 
 ## Testentwurf
 
-In dieser Phase wird ermittelt, _wie_ zu testen ist. Aus den Testbedingungen werden _Testfälle_ abgeleitet. Ein _abstrakter Testfall_ verwendet dazu Bedingungen, denen die Eingabewerte genügen müssen (z.B. $1000 \le x < 1500$), während ein _konkreter Testfall_ exakte Eingabewerte festlegt (z.B. $x=1250$). Abstrakte Testfälle müssen vor der Testdurchführung konkretisiert werden, sind dafür aber besser für spätere Testzyklen wiederverwendbar.
+In dieser Phase wird ermittelt, _wie_ zu testen ist. Aus den Testbedingungen werden _Testfälle_ abgeleitet. Ein _abstrakter Testfall_ verwendet dazu Bedingungen, denen die Eingabewerte genügen müssen (z.B. `1000≤x<1500`), während ein _konkreter Testfall_ exakte Eingabewerte festlegt (z.B. `x=1250`). Abstrakte Testfälle müssen vor der Testdurchführung konkretisiert werden, sind dafür aber besser für spätere Testzyklen wiederverwendbar.
 
 Pro Testfall sind Ausgangssituation (Vorbedingung), einzuhaltende Randbedingungen (Invariante) und erwartete Ergebnisse (Endbedingung) inkl. erwarteter Seiteneffekte, wie z.B. veränderte persistente Daten, zu definieren. Für Testdaten müssen Anforderungen festgelegt werden. Die Sollwerte können aus der Testbasis abgeleitet oder teilweise auch anhand einer Umkehrfunktion (z.B. Test der Verschlüsselung durch Entschlüsselung) festgelegt werden.
 
@@ -76,14 +76,20 @@ In den Testaktivitäten gemachte Erfahrungen (z.B. Abweichungen zwischen Plan un
 timeline
     title Der Testprozess
     section Testüberwachung und Teststeuerung
-        Testplanung: Testplanung
+        Testplanung: Testziele
         Testanalyse: Testbedingungen
         Testentwurf: Testfälle
         Testrealisierung: Testsuiten
-        Testdurchführung: Testprotokoll
-        Testabschluss: Testabschlussbericht
+        Testdurchführung: Testergebnis
+        Testabschluss: Erkenntnisse
 ```
 
 ## Fragen
 
-TODO
+1. _Testplanung_: Womit wird festgelegt, wann mit dem Testen angefangen und aufgehört werden soll?
+2. _Testüberwachung und Teststeuerung_: Warum überwacht man den Testprozess?
+3. _Testanalyse_: Was ist die Grundlage für die Testanalyse?
+4. _Testentwurf_: Was muss zu jedem Testfall festgelegt werden?
+5. _Testrealisierung_: In welcher Reihenfolge sollten die Testfälle angeordnet werden?
+6. _Testdurchführung_: Wie kann die Verfolgbarkeit gewährleistet werden?
+7. _Testabschluss_: Warum sollen die Testmittel gesichert werden?
