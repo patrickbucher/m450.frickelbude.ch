@@ -58,7 +58,7 @@ const flush = (node) => {
 const renderPayslip = (payslip) => {
   const payslipSection = document.getElementById("payslip");
   flush(payslipSection);
-  const formatDate = (d) => `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`;
+  const formatDate = (d) => d.toLocaleString("ch", { dateStyle: "medium" });
   const formatNumber = (n) =>
     n.toLocaleString("ch", {
       minimumFractionDigits: 2,
