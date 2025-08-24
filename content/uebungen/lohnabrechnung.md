@@ -12,4 +12,7 @@ Zur Umsetzung wurden für die Abzüge folgende Anforderungen festgelegt:
 2. ALV (1.1%) und NBU (0.73%) ab einem Jahreslohn von 2500.-
 3. PK (8.9%) ab einem Jahreslohn von 22680.-
 
-Entwerfe je drei abstrakte und konkrete Testfälle um die Anwendung so gut wie möglich zu testen. Halte pro Testfall die relevanten Eingabedaten (bzw. Regeln dafür) und die erwarteten Ergebnisse fest.
+## Aufgaben
+
+1. Entwerfe je drei abstrakte und konkrete Testfälle um die Anwendung so gut wie möglich zu testen. Halte pro Testfall die relevanten Eingabedaten (bzw. Regeln dafür) und die erwarteten Ergebnisse fest.
+2. Führe die Testfälle durch und halte die Ergebnisse in einem Testprotokoll fest.
