@@ -11,6 +11,7 @@ openapi = false
 showVisitedLinks = true
 themeVariant = 'zen-light'
 hideAuthorDate = true
+disableInlineCopyToClipboard = true
 
 [params.author]
 name = 'Patrick Bucher, BBZW Sursee'
