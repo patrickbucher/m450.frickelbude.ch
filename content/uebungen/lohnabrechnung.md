@@ -8,8 +8,8 @@ Unter [Payslip](/payslip) findest du eine kleine Lohnabrechnung, welche anhand d
 
 Zur Umsetzung wurden für die Abzüge folgende Anforderungen festgelegt:
 
-- AHV (8.7%), IV (1.4%) und EO (0.5%) ab dem 1. Januar nach dem 17. Geburtstag
-- ALV (1.1%) und NBU (0.73%) ab einem Jahreslohn von 2500.-
-- PK (8.9%) ab einem Jahreslohn von 22680.-
+1. AHV (8.7%), IV (1.4%) und EO (0.5%) ab dem 1. Januar nach dem 17. Geburtstag
+2. ALV (1.1%) und NBU (0.73%) ab einem Jahreslohn von 2500.-
+3. PK (8.9%) ab einem Jahreslohn von 22680.-
 
 Entwerfe je drei abstrakte und konkrete Testfälle um die Anwendung so gut wie möglich zu testen.
