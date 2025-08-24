@@ -1,5 +1,6 @@
 const DEDUCTION_RATES = new Map([
   ["AHV", 8.7],
+  ["MWST", 8.1],
   ["IV", 0.5],
   ["EO", 1.4],
   ["ALV", 1.1],
@@ -29,6 +30,10 @@ const calculateDeductions = (born, monthlyGrossSalary) => {
       (DEDUCTION_RATES.get("PK") / 100.0) * monthlyGrossSalary,
     );
   }
+  deductions.set(
+    "MWST",
+    (DEDUCTION_RATES.get("MWST") / 100.0) * monthlyGrossSalary,
+  );
   return deductions;
 };
 
@@ -70,8 +75,8 @@ const renderPayslip = (payslip) => {
     inline("td", "Brutttolohn"),
     inline("td", formatNumber(payslip.grossSalary)),
   );
-  const deductionRows = payslip.deductions
-    .entries()
+  const deductionRows = [...payslip.deductions.entries()]
+    .sort((l, r) => r[1] - l[1])
     .map((e) =>
       block("tr", inline("td", e[0]), inline("td", formatNumber(-e[1]))),
     );
