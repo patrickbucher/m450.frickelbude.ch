@@ -1,7 +1,7 @@
 +++
 date = '2025-08-21T20:44:34+02:00'
-draft = true
 title = 'Testumgebung'
+weight = 5
 +++
 
 Das Testobjekt kommt im Entwicklungszyklus auf verschiedenen Umgebungen zur Ausführung, welche in unterschiedlichem Ausmass auch als Testumgebungen verwendet werden. Eine mögliche Konfiguration kann folgendermassen aussehen:
@@ -19,4 +19,9 @@ Je nach Umgebung sind unterschiedliche Arten von Tests sinnvoll und erlaubt:
 - Integrationsumgebung: End-to-End Tests, Systemtests
 - Vorproduktion: Systemtests, Performance-Tests, Abnahmetests
 - Produktion: tatsächliche Nutzung
+
+## Fragen
+
+1. Warum unterscheidet sich die Datenhaltung je nach Umgebung?
+2. Welche Umgebungen verwendet ihr im Lehrbetrieb?
 
