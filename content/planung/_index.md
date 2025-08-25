@@ -4,5 +4,8 @@ title = 'Planung'
 weight = 2
 +++
 
-Unterrichtszeiten: 11:35-13:05 Uhr (ohne 5-Minuten-Pause)
+Unterrichtszeiten:
+
+- INA23a (Freitagvormittag): 09:55-11:25 Uhr (ohne 5-Minuten-Pause)
+- INA23b (Montagmittag): 11:35-13:05 Uhr (ohne 5-Minuten-Pause)
 
