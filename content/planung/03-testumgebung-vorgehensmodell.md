@@ -1,6 +1,7 @@
 +++
 date = '2025-08-31T13:58:18+02:00'
 title = 'Block 3: Testumgebung und Testen im Vorgehensmodell'
+weight = 3
 +++
 
 Im dritten Block werfen wir zuerst einen kurzen Blick auf die Problematik der Testumgebung. Anschliessend betrachten wir uns das Softwaretesting in den verschiedenen Vorgehensmodellen (klassisch-sequenziell und inkrementell-agil). Nach einem Einführungstext mit einigen Fragen sollen User Stories mit Akzeptanzkriterien zu einer gegebenen Problemstellung geschrieben werden.
