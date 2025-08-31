@@ -1,6 +1,6 @@
 +++
 date = '2025-08-27T14:14:59+02:00'
-title = 'Testen und Vorgehensmodelle'
+title = 'Testen nach Vorgehensmodell'
 weight = 6
 +++
 
