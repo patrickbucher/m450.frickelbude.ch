@@ -92,7 +92,7 @@ block-beta
     block:bl:1 space end
     b1("funktionaler\nSystementwurf"):2
     block:bm:5 space end
-    b2("Abnahmetest"):2
+    b2("Systemtest"):2
     block:br:1 space end
 
     space:11
@@ -106,9 +106,9 @@ block-beta
     space:11
 
     block:dl:3 space end
-    d1("technischer\nSystementwurf"):2
+    d1("Komponenten-\nspezifikation"):2
     block:dm:1 space end
-    d2("Integrationstest"):2
+    d2("Komponententest"):2
     block:dr:3 space end
 
     space:11
