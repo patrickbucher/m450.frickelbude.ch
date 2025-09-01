@@ -136,5 +136,5 @@ Vorgehensmodelle können miteinander kombiniert und auf die jeweiligen Bedürfni
     1. Warum ist die Testautomatisierung im agilen Vorgehen besonders wichtig?
     1. Aus der [Testplanung](/theorie/testprozess/#testplanung) kennen wir bereits die _Definition of Ready_ und die _Definition of Done_. Was haben diese Begriffe mit der Umsetzung einer User Story zu tun?
     1. Wozu werden zu jeder User Story Abnahmekriterien festgelegt?
-1. Wahl des Entwicklungsmodell
-    1. Nenne je ein (reales oder fiktives) Beispiel für ein Projekt das sich besonders für das sequenzielle bzw. agile Vorgehensmodell eignet und gib Gründe für diese Eignung an.
+1. Wahl des Entwicklungsmodells
+    1. Nenne je ein (reales oder fiktives) Beispiel für ein Projekt das sich besonders für das sequenzielle bzw. agile Vorgehensmodell eignet und nenne Gründe für diese Eignung.
