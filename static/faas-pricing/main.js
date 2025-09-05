@@ -45,3 +45,17 @@ const calculate = (requests, seconds, memory) => {
     ["GCP", calculateGcpPricing(requests, seconds, memory)],
   ]);
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const requestsTextBox = document.getElementsByName("requests")[0];
+  const cpuTimeTextBox = document.getElementsByName("cpuTime")[0];
+  const gbSecondsTextBox = document.getElementsByName("gbSeconds")[0];
+  const calculateButton = document.getElementsByName("calculate")[0];
+  calculateButton.addEventListener("click", () => {
+    const requests = Number.parseInt(requestsTextBox.value);
+    const cpuTime = Number.parseFloat(cpuTimeTextBox.value);
+    const gbSeconds = Number.parseInt(gbSecondsTextBox.value);
+    const results = calculate(requests, cpuTime, gbSeconds);
+    console.log(results);
+  });
+});
