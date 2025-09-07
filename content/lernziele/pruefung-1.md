@@ -63,10 +63,8 @@ weight = 1
 1. Sie können erklären, wie und warum sich der Testfokus beim agilen Vorgehen innerhalb eines Releasezyklus verschiebt.
 1. Sie können fünf Aspekte benennen, die für die Priorisierung von Tests relevant sein können.
 1. Sie können begründen, warum die Testdurchführung beim Eintreten der Eingangskriterien beginnen und beim Eintreten der Endkriterien aufhören sollte.
-1. Sie können je drei mögliche Eingangs- und Endkriterien für die Testdurchführung benennen.
 1. Sie können erklären, was bei der Teststeuerung und bei der Testüberwachung passiert, und welchem Zweck das dient.
 1. Sie können Inhalt und Zweck von Teststatusbericht und Testabschlussbericht benennen.
-1. Sie können mindestens fünf Punkte benennen, die ein Testbericht beinhalten sollte.
 
 ### Unterlagen
 
