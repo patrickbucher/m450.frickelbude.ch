@@ -111,3 +111,20 @@ Je nach Art des Projekts und Industrie unterscheiden sich die Anforderungen an s
 In agilen Projekten empfiehlt sich die Integration des Fortschrittberichts in Taskboards und Burn-Down-Charts.
 
 Testberichte sind in Umfang und Inhalt zielgruppenorientiert zu verfassen und können so einen Fokus auf technische oder betriebswirtschaftliche Aspekte haben.
+
+## Fragen
+
+1. Testplanung
+    1. Wann müssen die Abnahmekriterien für User Stories spätestens festgelegt werden?
+    1. Zwischen welchen beiden Iterationen unterscheidet man beim agilen Vorgehen im Bezug aufs Testen?
+    1. Wie und warum verschiebt sich der Testfokus innerhalb eines Releasezyklus?
+    1. Welche Aspekte sind für die Priorisierung der Tests relevant?
+    1. Warum sollten die Tests erst nach Erreichen der…
+        1. … Eingangskriterien durchgeführt werden?
+        1. … Endkriterien abgeschlossen werden?
+1. Teststeuerung
+    1. Was passiert bei der Teststeuerung?
+1. Testüberwachung
+    1. Wozu und wie werden die Testaktivitäten überwacht?
+1. Testberichte
+    1. Zwischen welchen beiden Arten von Testberichten unterscheidet man und wozu werden diese erstellt?

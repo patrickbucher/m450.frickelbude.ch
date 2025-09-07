@@ -47,3 +47,27 @@ weight = 1
 ### Unterlagen
 
 - [Testen nach Vorgehensmodell](/theorie/testen-nach-vorgehensmodell/)
+
+## Testorganisation
+
+1. Sie können differenziert auf die Frage antworten, ob Entwickler ihre eigene Software testen sollen, oder ob besser dedizierte Tester diese Aufgaben durchführen sollen.
+1. Sie können erklären, wie externes Testpersonal in agilen Projektteams mitwirken kann.
+1. Sie können die Zuständigkeiten der beiden Rollen _Testmanager_ und _Tester_ benennen.
+
+### Unterlagen
+
+- [Testorganisation](/theorie/testorganisation/)
+
+## Testplanung, Teststeuerung, Testüberwachung
+
+1. Sie können erklären, wie und warum sich der Testfokus beim agilen Vorgehen innerhalb eines Releasezyklus verschiebt.
+1. Sie können fünf Aspekte benennen, die für die Priorisierung von Tests relevant sein können.
+1. Sie können begründen, warum die Testdurchführung beim Eintreten der Eingangskriterien beginnen und beim Eintreten der Endkriterien aufhören sollte.
+1. Sie können je drei mögliche Eingangs- und Endkriterien für die Testdurchführung benennen.
+1. Sie können erklären, was bei der Teststeuerung und bei der Testüberwachung passiert, und welchem Zweck das dient.
+1. Sie können Inhalt und Zweck von Teststatusbericht und Testabschlussbericht benennen.
+1. Sie können mindestens fünf Punkte benennen, die ein Testbericht beinhalten sollte.
+
+### Unterlagen
+
+- [Testplanung, Teststeuerung, Testüberwachung](/theorie/testplanung-teststeuerung-testueberwachung/)

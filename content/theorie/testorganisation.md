@@ -28,3 +28,12 @@ Die Ausführung der Testarbeiten erfordert verschiedene Rollen mit Spezialwissen
 - Der _Tester_ ist für Testtätigkeiten zuständig und führt diese aus. Je nach Teststufe ist diese Rolle anders ausgeprägt: Als Entwickler für Komponenten- und Integrationstests oder als Business Analyst für Abnahmetests. Neben IT-Fachwissen ist auch Vertrautheit mit dem Testobjekt und Wissen über Testwerkzeuge erforderlich. Tester führen Reviews von Testdokumenten und -artefakten durch, stellen Testdaten bereit, wenden Testwerkzeuge an, führen manuelle Tests durch, protokollieren Testergebnisse und verfassen Fehlerberichte. Dazu benötigen Tester auch soziale Kompetenz und zahlreiche weitere «Soft Skills» wie etwa eine gute Kommunikationsfähigkeit.
 
 Testteams müssen oft (zeitweise) durch weitere Spezialisten für Datenbanken, Netzwerke oder durch bestimmte Fachexperten ergänzt werden. Fehlen solche Ressourcen intern, können auch externe Dienstleister beigezogen werden.
+
+## Fragen
+
+1. Welche Probleme können auftreten…
+    1. … wenn Entwickler ihre eigene Software testen?
+    1. … wenn dedizierte Tester die Software der Entwickler testen?
+1. Wie vertragen sich dedizierte Tester mit dem "Whole Team"-Ansatz der agilen Softwareentwicklung?
+1. Welche Aufgaben hat ein Testmanager?
+1. Welche Aufgaben hat ein Tester?
