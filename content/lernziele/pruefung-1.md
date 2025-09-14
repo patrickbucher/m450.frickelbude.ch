@@ -69,3 +69,16 @@ weight = 1
 ### Unterlagen
 
 - [Testplanung, Teststeuerung, Testüberwachung](/theorie/testplanung-teststeuerung-testueberwachung/)
+
+## Teststrategie
+
+- Sie können mindestens fünf relevante Fragen benennen, auf welche die Teststrategie bzw. das Testkonzept Antworten liefern soll.
+- Sie können zwischen den Ansätzen vorbeugend und reaktiv sowie analytisch und heuristisch unterscheiden.
+- Sie können mindestens fünf konkrete Teststrategien benennen und mit einem Beispiel erläutern.
+- Sie können zwischen Projekt- und Produktrisiken unterscheiden und je mindestens zwei verschiedene anhand eines Beispiels erläutern.
+- Sie können vier Möglichkeiten zur Risikosteuerung aufzählen und beurteilen, wann diese angemessen sind.
+- Sie können den Zusammenhang zwischen eingesparten Testkosten und zusätzlich anfallenden Fehlerkosten erklären.
+
+### Unterlagen
+
+- [Teststrategie](/theorie/teststrategie)

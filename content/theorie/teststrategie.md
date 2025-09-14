@@ -116,4 +116,13 @@ Durch reduzierte Testaktivitäten eingespartes Geld wirkt sich oftmals durch hö
 
 Je früher ein Fehler erkannt wird, desto günstiger fällt seine Korrektur in der Regel aus.
 
+## Fragen
 
+1. Mögliche Ansätze
+    - Wie funktioniert _exploratives Testen_ und wann ist es sinnvoll?
+2. Risiken
+    - Warum soll Testen _Produktrisiken minimieren_ und _Projektrisiken kompensieren_ können?
+3. Risikomanagement
+    - Wie würde ein Beispiel für _Akzeptanz_, _Transfer_ und _Notfallplan_ aussehen?
+4. Testkosten und Fehlerkosten
+    - Welche möglichen Kosten können durch unzureichendes Testen anfallen?
