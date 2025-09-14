@@ -16,7 +16,7 @@ Der Prozess wird als ein sequenzieller Ablauf von Aktivitäten verstanden, nach 
 
 Nach diesem Modell sind die einzelnen Phasen ‒ _System Requirements_, _Software Requirements_, _Analysis_, _Program Design_, _Testing_ und _Operation_ ‒ zeitlich streng voneinander getrennt. Das Testen wird als einmalige und den Entwicklungsarbeiten nachgelagerte Aktivität verstanden, nicht als projektbegleitende Tätigkeit.
 
-![Das Wasserfallmodell](/img/waterfall.svg)
+![Das Wasserfallmodell](/img/wasserfall.svg)
 
 ### Das V-Modell
 
