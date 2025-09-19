@@ -106,7 +106,7 @@ Die Schätzung der Aufwände kann auf verschiedenen Verfahren basieren:
 
 Je grösser die einzuschätzende Aufgabe ist, desto ungenauer fällt in der Regel deren Schätzung aus. Da Schätzfehler unvermeidbar sind, sollen Annahmen möglichst gut dokumentiert werden, womit die Schätzungsmethodik in Zukunft verfeinert werden kann.
 
-Fehlen Erfahrungswerte und Expertenwissen, kann man von eine Testaufwand im Umfang von ca. 25%-50% der Entwicklungskosten ausgehen.
+Fehlen Erfahrungswerte und Expertenwissen, kann man von einem Testaufwand im Umfang von ca. 25%-50% der Entwicklungskosten ausgehen.
 
 Durch reduzierte Testaktivitäten eingespartes Geld wirkt sich oftmals durch höhere Folgekosten aus:
 
