@@ -10,7 +10,7 @@ Damit entdeckte Fehler auch korrigiert werden können, müssen diese zunächst e
 
 Ein Fehler soll gemeldet werden, wenn ein Anwender eine Fehlerwirkung feststellt, oder ein Entwickler einen Fehlerzustand entdeckt. Das Testprotokoll dokumentiert eine allfällige Abweichung vom Istverhalten eines Testobjekts zu dessen Sollverhalten. Für jede solche Abweichung ist zu prüfen, ob wirklich ein Fehler vorliegt. Dabei unterscheidet man zwischen vier Fällen der Fehlerklassifikation:
 
-![zwei Testobjekt-Zustände, zwei Testergebnisse ‒ vier Interpretationen](/img/testergebnis.svg){width=80%}
+![zwei Testobjekt-Zustände, zwei Testergebnisse ‒ vier Interpretationen](/img/testergebnis.svg)
 
 1. _richtig positiv_: Das Testobjekt ist fehlerhaft, und ein entsprechender Testfall scheitert (ist «rot»).
 2. _falsch negativ_: Das Testobjekt ist fehlerhaft, aber kein Testfall zeigt dies an, da ein entsprechender Testfall fehlt, mangelhaft konzipiert bzw. umgesetzt oder nicht (korrekt) ausgeführt worden ist.
@@ -37,7 +37,7 @@ Die Dringlichkeit der Fehlerbehebung hängt auch von weiteren Faktoren ab, etwa 
 
 Der Testmanager muss nicht nur die korrekte Erfassung und Verwaltung der Fehlerberichte sicherstellen, sondern auch deren Korrektur. Der Fortschritt dieses Vorgangs wird mit einem Statusattribut pro Fehlerbericht festgehalten, wobei beispielsweise folgendes Schema zum Einsatz kommen kann:
 
-![mögliche Zustandsübergänge eines Fehlerberichts](/img/fehlermanagement.svg){width=60%}
+![mögliche Zustandsübergänge eines Fehlerberichts](/img/fehlermanagement.svg)
 
 - _Neu_: Der Fehlerbericht wurde erfasst und vom Verfasser nach Gutdünken klassifiziert.
 - _Offen_: Der Testmanager hat den Fehlerbericht überprüft, akzeptiert und einem Entwickler zur Korrektur zugewiesen.
