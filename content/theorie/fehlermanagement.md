@@ -52,3 +52,8 @@ Wichtig ist, dass nur der Tester (und nicht der Entwickler) den Status auf «erl
 
 Eine gut gepflegte Fehlerdatenbank erleichtert nicht nur die Nachverfolgung der einzelnen Korrekturvorgänge, sondern erlaubt auch Auswertungen zur Softwarequalität und Prognosen und kann als Entscheidungsgrundlage für Freigabetermine dienen. Auch der Entwicklungsprozess kann damit verbessert werden, indem man etwa die Anzahl und Schwere der Fehlerberichte den einzelnen Komponenten des Testobjekts zuordnet und diese den jeweiligen Testpraktiken gegenüberstellt.
 
+## Fragen
+
+1. In welche Reihenfolge (von gut bis schlecht) lassen sich die vier Quadranten einsortieren? Warum?
+2. Warum lässt sich die Schwere eines Fehlers nicht mit dessen Korrekturpriorität gleichsetzen?
+3. Warum soll nur der Tester und nicht der Entwickler den Status eines Fehlerberichts auf «erledigt» setzen dürfen?
