@@ -4,7 +4,7 @@ title = 'Fehlermanagement'
 weight = 6
 +++
 
-## Klasifikation Testergebnisse
+## Klassifikation Testergebnisse
 
 In welche Quadranten der Fehlerklassifikation lassen sich die folgenden Sachverhalte einteilen? Begründen Sie Ihre Entscheidung und dokumentieren Sie allfällig getroffene Annahmen.
 

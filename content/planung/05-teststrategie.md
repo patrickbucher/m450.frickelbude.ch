@@ -4,7 +4,7 @@ title = 'Block 5: Teststrategie'
 weight = 5
 +++
 
-Im vierten Block befassen wir uns mit der Teststrategie. Dazu betrachten wir uns relevante Faktoren, mögliche Ansätze sowie mit Risiken und dem Risikomanagement. Die Test- und Fehlerkosten spielen bei diesen Überlegungen auch eine wichtige Rolle. Nach einem Theorieblock versuchen wir, eine Teststrategie für den Einheitsrechner auszuarbeiten.
+Im fünften Block befassen wir uns mit der Teststrategie. Dazu betrachten wir uns relevante Faktoren, mögliche Ansätze sowie mit Risiken und dem Risikomanagement. Die Test- und Fehlerkosten spielen bei diesen Überlegungen auch eine wichtige Rolle. Nach einem Theorieblock versuchen wir, eine Teststrategie für den Einheitsrechner auszuarbeiten.
 
 ## Ziel
 
@@ -20,4 +20,4 @@ Sie können eine Teststrategie für ein gegebenes Projekt formulieren und ihre E
 
 ### Hausaufgabe
 
-Schliesst den Auftrag [Teststrategie](/uebungen/teststrategie) in der Gruppe ab.
+Schliessen Sie den Auftrag [Teststrategie](/uebungen/teststrategie) in der Gruppe ab.
