@@ -18,8 +18,10 @@ Sie können Testergebnisse richtig einordnen, den Aufbau eines Fehlerberichts er
 
 ### Lektion 2
 
-- [45 min.] Individuelle Prüfungsvorbereitung
+- [45 min.] Prüfungsvorbereitung
 
 ### Hausaufgabe
 
 Bereiten Sie sich anhand der [Lernziele](/lernziele/pruefung-1/) auf die erste Modulprüfung vor.
+
+An der Prüfung darf eine **handgeschriebene** Zusammenfassung von **einem Blatt** bzw. **zwei A4-Seiten** verwendet werden.
