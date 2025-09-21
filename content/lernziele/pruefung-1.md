@@ -8,7 +8,7 @@ weight = 1
 
 1. Sie können die Begriffe _Testbasis_, _Fehler_, _Fehlerwirkung_, _Debugging_, _Fehlerzustand_, _Fehlermaskierung_ definieren und ihren Zusammenhang erklären.
 1. Sie können den Zusammenhang zwischen Risiko und Testaufwand erklären.
-1. Sie können Testergebnisse nach beobachteter Fehlerwirkung und vorhandenem Fehlerzustand in vier Quadranten einteilen.
+1. Sie können Testergebnisse nach beobachtetem Fehlerwirkung und vorhandenem Fehlerzustand in vier Quadranten einteilen.
 1. Sie können erklären, warum Testen nicht beweisen kann, dass eine Software fehlerfrei ist.
 
 ### Unterlagen
@@ -82,3 +82,14 @@ weight = 1
 ### Unterlagen
 
 - [Teststrategie](/theorie/teststrategie)
+
+## Fehlermanagement
+
+- Sie können die vier Quadranten der Fehlerklassifikation herleiten, erklären und ein Testergebnis klassifizieren.
+- Sie können erklären, wie ein Fehlerbericht aufgebaut ist und welche Informationen er zu welchem Zweck enthält.
+- Sie können anhand eines Fehlerberichts die Schwere des zugrundeliegenden Fehlers einschätzen.
+- Sie können ein Schema der Zustandsabfolgen eines Fehlerberichts wiedergeben und erklären.
+
+### Unterlagen
+
+- [Fehlermanagement](/theorie/fehlermanagement)
