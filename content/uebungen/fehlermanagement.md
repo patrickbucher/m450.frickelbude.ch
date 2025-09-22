@@ -19,7 +19,7 @@ In welche Quadranten der Fehlerklassifikation lassen sich die folgenden Sachverh
 
 ## Schweregrad von Fehlerberichten
 
-Ordnen Sie den folgenden Fehlerberichten einen Schweregrad zu. Begründe Sie Ihre Entscheidung und dokumentieren Sie allfällig getroffene Annahmen.
+Ordnen Sie den folgenden Fehlerberichten einen Schweregrad zu. Begründen Sie Ihre Entscheidung und dokumentieren Sie allfällig getroffene Annahmen.
 
 1. Die Preise werden auf fünf statt auf einzelne Rappen gerundet angezeigt.
 1. Die Messergebnisse werden als Ganzzahlen statt als Fliesskommazahlen abgespeichert.
