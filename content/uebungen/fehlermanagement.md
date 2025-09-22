@@ -10,7 +10,7 @@ In welche Quadranten der Fehlerklassifikation lassen sich die folgenden Sachverh
 
 1. Während eines Refactorings schlagen plötzlich verschiedene Testfälle fehl.
 1. Nach einer Anpassung der Validierungsfunktion laufen die vormals scheiternden Testfälle durch.
-1. Nach der Umstellng der Mehrwertsteuerberechnung auf die neuen Sätze laufen die bestehenden Testfälle überraschenderweise immer noch durch.
+1. Nach der Umstellung der Mehrwertsteuerberechnung auf die neuen Sätze laufen die bestehenden Testfälle überraschenderweise immer noch durch.
 1. Nach einer Performance-Optimierung laufen einige Testfälle nicht mehr durch.
 1. Nach der Erweiterung der Rabattlogik laufen immer noch alle Testfälle durch. Da der Entwickler nicht nach _Test-Driven Development_ vorgegangen ist, muss er nun noch die entsprechenden Testfälle schreiben.
 1. Nach einer versehentlich vorgenommenen Anpassung der Zinslogik (der Zins wird neu dem Saldo abgezogen und nicht mehr dazuaddiert) laufen noch alle Testfälle durch.
