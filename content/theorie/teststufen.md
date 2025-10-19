@@ -4,8 +4,6 @@ title = 'Teststufen'
 weight = 11
 +++
 
-## Teststufen
-
 Die Architektur eines Softwaresystems legt fest, aus welchen Teilsystemen das Gesamtsystem, und aus welchen Komponenten die verschiedenen Teilsysteme bestehen. Entsprechend muss beim Testen jede dieser Ebenen als separate _Teststufe_ betrachtet werden.
 
 Beim sequenziellen Vorgehen sind die Endkriterien einer unteren Teststufe oftmals Teil der Einangskriterien der nächsthöheren Teststufe; es wird «von unten nach oben» getestet. Im agilen Vorgehen kommt es zu einer zeitlichen Verschmelzung der unterschiedlichen Teststufen.
@@ -19,7 +17,7 @@ Die Anzahl und Benennung der Teststufen kann sich dabei je nach Vorgehensmodell 
 
 Je nach Teststufe unterscheiden sich Testobjekt, Testziele, Testmethoden und Verantwortlichkeiten für die Testaufgaben.
 
-### Komponententest
+## Komponententest
 
 Beim _Komponententest_ werden die Softwarebausteine auf tiefster Architekturebene ‒ Module, Klassen, «Units» ‒ getestet. Entsprechende Tests bezeichnet man als Modultests, Klassentests bzw. Unittests. Als Testbasis dient die jeweilige Spezifikation einer solchen Komponente, d.h. deren Anforderungen. Auch Skripte, Konfigurationen oder Datenbankinhalte können Testobjekte eines Komponententests sein.
 
@@ -39,7 +37,7 @@ Da der Entwickler eines Komponententests Zugriff auf den Quellcode des Testobjek
 
 Beim iterativen «Test-First»-Vorgehen wird zuerst ein automatischer Testfall erstellt und erst dann die gewünschte Komponente umgesetzt. Dieses Vorgehen wird wiederholt, bis die umgesetzte Komponente allen Anforderungen genügt ‒ und alle Testfälle fehlerfrei durchlaufen. Dieses Vorgehen bezeichnet man auch als «testgetriebene Entwicklung» bzw. als «Test-Driven Development» (TDD).
 
-### Integrationstest
+## Integrationstest
 
 Der _Integrationstest_ oder _Komponentenintegrationstest_ prüft das Zusammenspiel zweier oder mehrerer Komponenten. Hierzu müssen diese Komponenten zuerst von den Entwicklern integriert werden, d.h. es muss Code vorhanden sein, der die jeweiligen Komponenten verwendet. Beim Integrationstest sollen Fehlerzustände ermittelt werden, welche in den Schnittstellen zwischen den Komponenten bzw. in ihrem Zusammenspiel auftreten.
 
@@ -80,7 +78,7 @@ Durch eine sinnvolle Reihenfolge der Integration kann frühzeitig mit den Testak
 
 In der Praxis trifft man Mischformen dieser Strategien an. Eine «Big-Bang»-Integration, bei der alle Komponenten auf einmal integriert werden, ist nicht sinnvoll, weil hierdurch zu lange mit den Integrations- und Testaktivitäten gewartet wird, und dann alle Fehlerwirkungen auf einmal geballt auftreten, was deren Lokalisierung erschwert.
 
-### Systemtest
+## Systemtest
 
 Im _Systemtest_ wird das integrierte Gesamtsystem darauf geprüft, ob es die spezifizierten Produktanforderungen erfüllt. Trotz erfolgreicher Komponenten- und Integrationstests ist das nötig, weil diese tieferen Testarten die Erfüllung technischer Anforderungen überprüfen (_Verifizierung_), während der Systemtest aus Perspektive des Anwenders bzw. Kunden deren Anforderungen prüft (_Validierung_). Ausserdem können gewisse Funktionen und Systemeigenschaften nur anhand des Gesamtsystems überprüft werden.
 
@@ -94,7 +92,7 @@ Beinhaltet der Systemtest auch die Überprüfung von Schnittstellen zu externen 
 
 Solche Systemintegrationstests erfordern ebenfalls eine produktionsnahe Testumgebung der relevanten Umsysteme. Oft werden Systemintegrationstests erst durchgeführt, wenn die Systemtests einigermassen fortgeschritten sind, da sonst die Unterscheidung des Ursprungs von Fehlerwirkungen (aus dem Eigen- oder einem Umsystem) schwerfällt. Dabei ist zu berücksichtigen, dass die Gegenseite der Schnittstelle nicht unter Kontrolle des Entwicklungsteams steht und dadurch fremdverschuldete Fehlerwirkungen erzeugen kann.
 
-### Abnahmetest
+## Abnahmetest
 
 Die bisher betrachteten Teststufen werden in der Verantwortung des Herstellers der Software durchgeführt. Vor der Inbetriebnahme der Software beim Kunden erfolgt nur noch der abschliessende _Abnahme-_ bzw. _Akzeptanztest_. Hier steht das Urteil des Anwenders bzw. des Kunden im Vordergrund. Der Umfang der Abnahmetests ist projektabhängig und orientiert sich an den ermittelten Risiken.
 
@@ -109,3 +107,18 @@ Gravierende Akzeptanzprobleme sollte man aber bereits früher im Entwicklungspro
 Kommt eine Software auf sehr vielen Systemumgebungen zum Einsatz, können nicht alle möglichen Kombinationen von Konfigurationen getestet werden. In diesem Fall wird ein sogenannter _Feldtest_ durchgeführt, für welchen der Anbieter einem ausgesuchten Benutzerkreis eine Vorabversion der neuen Software zur Verfügung stellt. Der Anbieter kann Vorgaben zu Testfällen machen oder die Anwender die Software durch eigene (realistische und alltägliche) Anwendungsszenarien testen lassen.
 
 Die Anwender melden ihre Feststellungen und Fehlerberichte dem Hersteller, der nun durch Verbesserungen und Fehlerkorrekturen darauf reagieren kann. Ein solcher Feldtest wird oftmals herstellerintern als _Alpha-Test_ und extern als _Beta-Test_ durchgeführt. Für letzteres muss die Software bestimmten Mindestqualitätsstandards genügen, damit sie externen Testern zugemutet werden kann.
+
+## Fragen
+
+1. Komponententests
+    1. Warum sollen Komponenten isoliert voneinander getestet werden?
+    1. Ist der Komponententest ein Blackbox- oder Whitebox-Test? Warum?
+1. Integrationstest
+    1. Warum können Integrationstests Fehlerwirkungen hervorrufen, wenn die Komponententests der darin integrierten Komponenten fehlerfrei durchlaufen?
+    1. Warum schreibt man Komponententests, wenn doch die Integrationstests die Komponenten gleich mittesten?
+1. Systemtest
+    1. Was unterscheidet den Systemtest von den beiden tieferen Teststufen Komponenten- und Integrationstest?
+    1. Was bezeichnet man als Systemintegrationstest?
+1. Abnahmetest
+    1. Was unterscheidet den Abnahmetest von den drei tieferen Teststufen System-, Integrations- und Komponententest?
+    1. Was ist ein Feldtest und wann ist er sinnvoll?

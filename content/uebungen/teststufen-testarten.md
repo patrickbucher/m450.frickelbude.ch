@@ -4,11 +4,13 @@ title = 'Teststufen & Testarten'
 weight = 7
 +++
 
+Halte die Antworten auf die folgenden Fragen in einem Dokument fest.
+
 ## Teststufen
 
 Ergänze die folgende Tabelle anhand des [Einführungstextes](/theorie/teststufen).
 
-| **Teststufe**        | **Testbasis** | **Testobjekte** | **Testziele** | **Umgebung** | **Tester** |
+| **Teststufe**        | **Testbasis** | **Testobjekte** | **Testziele** | **Umgebung** | **Verantwortung** |
 |----------------------|---------------|-----------------|---------------|--------------|------------|
 | **Komponententest**  |               |                 |               |              |            |
 | **Integrationstest** |               |                 |               |              |            |
@@ -17,8 +19,11 @@ Ergänze die folgende Tabelle anhand des [Einführungstextes](/theorie/teststufe
 
 ## Testarten
 
-TODO
+Suche dir eine Software aus, die du häufig verwendest. Überlege dir nun dazu **drei** nicht funktionale Aspekte, die für diese Software und für dich relevant sein können. Beschreibe nun je einen Testfall für entsprechende nicht funktionale Tests.
 
 ## Testen nach Weiterentwicklung
 
-TODO
+Hast du schon einmal einen Regressionsfehler in einer Software erzeugt oder mitbekommen?
+
+- Wenn ja: Wie hätte dieser Fehler verhindert werden können?
+- Wenn nein: Wie konnten solche Fehler bisher vermieden werden?
