@@ -23,3 +23,5 @@ Sie können die verschiedenen Teststufen und Testarten voneinander unterscheiden
 ### Hausaufgaben
 
 Installiere [Deno](https://deno.com/), gib deinen Namen mithilfe von `console.log` aus und weise das mit einem Screenshot nach (siehe Teams-Auftrag).
+
+![Nachweis Deno-Installation](/img/deno-setup.png)
