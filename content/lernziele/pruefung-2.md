@@ -1,6 +1,5 @@
 +++
 date = '2025-10-19T18:41:56+02:00'
-draft = true
 title = 'Prüfung 2'
 +++
 
