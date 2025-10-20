@@ -14,7 +14,7 @@ Sie können die verschiedenen Teststufen und Testarten voneinander unterscheiden
 
 ### Lektionen 1 & 2
 
-- [5 min.] Administrtives
+- [5 min.] Administratives
 - [20 min.] Theorie [Teststufen](/theorie/teststufen)
 - [15 min.] Theorie [Testarten](/theorie/testarten)
 - [20 min.] Theorie [Test nach Weiterentwicklung](/theorie/test-nach-weiterentwicklung)
