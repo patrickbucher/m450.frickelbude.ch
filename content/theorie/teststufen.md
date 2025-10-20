@@ -110,7 +110,7 @@ Die Anwender melden ihre Feststellungen und Fehlerberichte dem Hersteller, der n
 
 ## Fragen
 
-1. Komponententests
+1. Komponententest
     1. Warum sollen Komponenten isoliert voneinander getestet werden?
     1. Ist der Komponententest ein Blackbox- oder Whitebox-Test? Warum?
 1. Integrationstest
