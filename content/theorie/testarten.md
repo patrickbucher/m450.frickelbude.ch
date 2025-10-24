@@ -16,7 +16,7 @@ Funktionale Tests kommen auf allen Teststufen zum Einsatz. Beschreiben die Anfor
 
 ## Nicht funktionale Tests
 
-Nicht funktionale Anforderungen beschreiben, wie gut ein System oder Teilsystem seine Arbeit erfüllen soll. Solche Eigenschaften beeinflussen die Zufriedenheit des Anwenders bzw. des Kunden stark. Aus Kundenperspektive sind Bedienbarkeit und Performanz wichtige solche Kriterien. Aufseiten des Anbieters sind Änderbarkeit und Wartbarkeit wichtige Aspekte.
+Nicht funktionale Anforderungen beschreiben, wie gut ein System oder Teilsystem seine Arbeit erfüllen soll. Solche Eigenschaften beeinflussen die Zufriedenheit des Anwenders bzw. des Kunden stark. Diese Kriterien unterscheiden sich je nach Perspektive: Für den Anwender sind Bedienbarkeit und Performanz wichtig, während der Anbieter Wert auf Änderbarkeit und Wartbarkeit legt.
 
 Nicht funktionale Anforderungen werden meist auf Stufe Systemtest mit folgenden Testarten überprüft:
 
