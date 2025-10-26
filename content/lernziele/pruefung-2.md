@@ -10,3 +10,10 @@ title = 'Prüfung 2'
 1. Sie können _funktionale_ von _nicht funktionalen_ und _anforderungsbezogene_ von _strukturbezogenen_ Tests unterscheiden und Testziele der jeweiligen Testarten benennen.
 1. Sie können die Begriffe _Softwarepflege_ und _Softwarewartung_ definieren, voneinander abgrenzen und erklären, warum Software überhaupt gepflegt und gewartet werden muss.
 1. Sie können die Begriffe _Regressionsfehler_ und _Regressionstest_ sowie eine Massnahme zu deren Verhinderung erklären.
+
+## Statischer Test
+
+1. Sie können den statischen vom dynamischen Test anhand der Aspekte _Testobjekte_, _Testvorgehen, _Testzeitpunkt_ und _Testziele_ unterscheiden.
+1. Sie können die Vorteile von Reviews auf Arbeitsergebnisse und Entwicklungsprozess erklären.
+1. Sie können den Ablauf, Rollen und Arten von Reviews erklären.
+1. Sie können die Grenzen der statischen gegenüber der dynamischen Prüfung aufzeigen.

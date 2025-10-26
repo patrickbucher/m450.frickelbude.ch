@@ -6,7 +6,7 @@ weight = 14
 
 Der _statische Test_ (bzw. die _statische Analyse_ oder _statische Prüfung_) kann manuell oder werkzeuggestützt erfolgen. Das Testobjekt ist nicht ein ausführbares Programm wie beim dynamischen Test, sondern ein für die Erstellung der Software relevantes Arbeitsergebnis (Dokument, Quellcode).
 
-Im Gegensatz zum dynamischen Test erfordert der statische Test keine Formulierung von Testfällen. Der statische Test ist darum weniger aufwändig und kann Fehlerzustände früher feststellen. Im Sinne der Prävention sollen mit statischen Tests Fehler ekrannt werden, bevor sie sich auf den weiteren Entwicklungsprozess auswirken können.
+Im Gegensatz zum dynamischen Test erfordert der statische Test keine Formulierung von Testfällen. Der statische Test ist darum weniger aufwändig und kann Fehlerzustände früher feststellen. Im Sinne der Prävention sollen mit statischen Tests Fehler erkannt werden, bevor sie sich auf den weiteren Entwicklungsprozess auswirken können.
 
 ## Das Review
 
@@ -31,7 +31,7 @@ Wie das Review durchgeführt werden soll, hängt davon ab, welche Ziele man dami
 Der Reviewprozess besteht aus mehreren Schritten und kann für umfassende Reviews mehrmals durchgespielt werden. Diese Schritte oder Hauptaktivitäten sind:
 
 1. **Planung**: Die Projektleitung entscheidet, welches Arbeitsergebnis welcher Art von Review unterzogen wird. Je nach Art des Reviews unterscheiden sich die zu besetzenden Rollen und die auszuführenden Aktivitäten. Die zu bewertenden Qualitätsmerkmale sowie der Zeitrahmen und der Aufwand werden auch in der Planung festgelegt. Die Rollen werden mit geeigneten Personen besetzt. In Zusammenarbeit mit dem Autor des zu prüfenden Artefakts vergewissert man sich, dass sich dieses in einem stabilen Zustand befindet. Bei einem formalen Review werden auch eingangs- und Ausgangskriterien für die einzelnen Arbeitsschritte festgelegt. Werden umfassende Arbeitsergebnisse einem Review unterzogen, kann eine Auswahl der zu prüfenden Inhalte getroffen werden.
-2. **Initiierung**: Die am Review beteiligten Personen werden über ihre Rollen informiert und mit allen notwendigen Informationen versorgt. Dies kann ihm Rahmen einer Besprechung oder rein schriftlich vonstatten gehen. Neben dem zu prüfenden Arbeitsergebnis müssen auch sämtliche Informationen bereitgestellt werden, womit der Soll-Zustand des Artefakts eingeschätzt werden kann. Solche _Basisdokumente_ («Baseline») können Standards, Designdokumente, Richtlinien usw. sein. Auch Checklisten oder Vorlagen für das Festhalten der Befunde können hilfreich sein und den Arbeitsaufwand reduzieren. Beim formalen Review wird geprüft, ob die Eintrittskriterien eingehalten werden. Das Review kann abgebrochen werden, wenn das zu prüfende Arbeitsergebnis hierzu noch nicht stabil oder reif genug ist.
+2. **Initiierung**: Die am Review beteiligten Personen werden über ihre Rollen informiert und mit allen notwendigen Informationen versorgt. Dies kann im Rahmen einer Besprechung oder rein schriftlich vonstatten gehen. Neben dem zu prüfenden Arbeitsergebnis müssen auch sämtliche Informationen bereitgestellt werden, womit der Soll-Zustand des Artefakts eingeschätzt werden kann. Solche _Basisdokumente_ («Baseline») können Standards, Designdokumente, Richtlinien usw. sein. Auch Checklisten oder Vorlagen für das Festhalten der Befunde können hilfreich sein und den Arbeitsaufwand reduzieren. Beim formalen Review wird geprüft, ob die Eintrittskriterien eingehalten werden. Das Review kann abgebrochen werden, wenn das zu prüfende Arbeitsergebnis hierzu noch nicht stabil oder reif genug ist.
 3. **Individuelles Review**: Die Reviewer (oder «Gutachter») unterziehen das Arbeitsergebnis einer intensiven Prüfung, wozu sie Gebrauch von den relevanten Basisdokumenten machen und Abweichungen sowie potenzielle Fehlerzustände festhalten. Dieser Schritt gilt als Vorbereitung für die folgende Phase.
 4. **Reviewsitzung**: Die Ergebnisse aus dem individuellen Review werden im Rahmen einer gemeinsamen Besprechung oder mithilfe einer Kollaborationsplattform zusammengeführt. Anschliessend werden diese Befunde besprochen und analysiert. Die Zuständigkeit für deren Behebung wird festgelegt und eine evtl. nötige Nachkontrolle geplant. Das Erreichen der festgelegten Qualitätskriterien wird gemeinsam eingeschätzt und dokumentiert. Am Ende steht die Entscheidung über das Arbeitsergebnis: Wird dieses (evtl. mit geringfügigen Änderungen) akzeptiert, zu einer umfangreichen Überarbeitung zurückgewiesen oder gar verworfen?
 5. **Behebung und Berichterstattung**: Wird ein detailliertes Reviewprotokoll erstellt, erübrigt sich die Anfertigung einzelner Fehlerberichte. Der Autor des Arbeitsergebnisses kann die Anpassungen direkt durch das Abarbeiten dieses Protokolls vornehmen. Anhand der gesammelten Reviewprotokolle ist es möglich, den Arbeitsprozess zu verbessern, indem man aus häufig auftretenden Fehlern Schulungsmassnahmen ableitet.
@@ -90,7 +90,7 @@ Eine solche statische Analyse kann zwar nicht verhindern, dass übliche Fehlerzu
 
 ## Abgrenzung zum dynamischen Test
 
-Eine umfassende Teststrategie erfordert eine Kombination aus statischer und dynamischer Prüfung. Gelangt ein Quellcodeabschnitt sehr selten zur Ausführung, kann es sehr lange dauern, bis ein dynamischer Test einen Fehlerzustand darin aufdecken kann. Wird der Code hingegen auch statisch überprüft, kann der Fehelrzustand unter Umständen schnell gefunden werden.
+Eine umfassende Teststrategie erfordert eine Kombination aus statischer und dynamischer Prüfung. Gelangt ein Quellcodeabschnitt sehr selten zur Ausführung, kann es sehr lange dauern, bis ein dynamischer Test einen Fehlerzustand darin aufdecken kann. Wird der Code hingegen auch statisch überprüft, kann der Fehlerzustand unter Umständen schnell gefunden werden.
 
 Aspekte wie Erweiterbarkeit und Lesbarkeit des Programmcodes können nur mit statischen Tests ermittelt werden. Metriken, die das Laufzeitverhalten des Codes betreffen, z.B. Performanz und Ressourcenverbrauch, erfordern hingegen dynamische Tests.
 
@@ -103,3 +103,15 @@ Statische Tests können v.a. die folgenden Arten von Fehlerzuständen ermitteln:
 - **Unpassende Schnittstellen**: Komponenten lasen sich aufgrund inkompatibler Schnittstellen nicht integrieren.
 
 Viele Aspekte der Wartbarkeit können (nur) mithilfe der statischen Analyse überprüft werden. Je länger ein Softwaresystem im Einsatz ist und weiterentwickelt wird, desto eher lohnt sich eine ‒ möglichst frühe ‒ statische Prüfung.
+
+## Fragen
+
+1. Wie unterscheiden sich statischer und dynamischer Test im Bezug auf:
+    1. Testobjekt
+    2. Testfälle
+    3. Regressionstest
+    4. Testzeitpunkt
+    5. Testziele
+2. Warum muss ein Arbeitsergebnis sich für ein Review in einem stabilen Zustand befinden?
+3. Welche positiven Effekte haben Reviews jenseits der Verbesserung des geprüften Arbeitsergebnisses?
+4. Welche Qualitätsmerkmale einer Software können mithilfe eines statischen Tests kaum oder gar nicht ermittelt werden?
