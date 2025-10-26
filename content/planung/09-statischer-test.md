@@ -15,7 +15,7 @@ Sie werden mit dem Vorgehen des Reviews vertraut und üben es an einem konkreten
 ### Lektionen 1 & 2
 
 - [5 min.] Administratives
-- [25 min.] Theorie zum [statischen Test](/theorie/statischer-test)
+- [25 min.] Theorie zum [statischen Test](/praxis/statischer-test)
 - [30 min.] Übung zum [Review](/uebungen/review)
 - [30 min.] Gemeinsame Reviewsitzung
 

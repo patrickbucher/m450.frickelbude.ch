@@ -1,7 +1,7 @@
 +++
 date = '2025-10-19T13:59:55+02:00'
 title = 'Testarten'
-weight = 12
+weight = 2
 +++
 
 Je nach Teststufe liegt der Fokus auf bestimmten Arten von Tests. Einerseits unterscheidet man zwischen _funktionalen_ und _nicht funktionalen_ und andererseits zwischen _anforderungsbasierten_ und _strukturbasierten_ Tests.

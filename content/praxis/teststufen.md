@@ -1,7 +1,7 @@
 +++
 date = '2025-10-19T13:58:35+02:00'
 title = 'Teststufen'
-weight = 11
+weight = 1
 +++
 
 Die Architektur eines Softwaresystems legt fest, aus welchen Teilsystemen das Gesamtsystem, und aus welchen Komponenten die verschiedenen Teilsysteme bestehen. Entsprechend muss beim Testen jede dieser Ebenen als separate _Teststufe_ betrachtet werden.

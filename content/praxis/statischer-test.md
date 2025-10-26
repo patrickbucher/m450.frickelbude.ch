@@ -1,7 +1,7 @@
 +++
 date = '2025-10-26T14:04:41+01:00'
 title = 'Statischer Test'
-weight = 14
+weight = 4
 +++
 
 Der _statische Test_ (bzw. die _statische Analyse_ oder _statische Prüfung_) kann manuell oder werkzeuggestützt erfolgen. Das Testobjekt ist nicht ein ausführbares Programm wie beim dynamischen Test, sondern ein für die Erstellung der Software relevantes Arbeitsergebnis (Dokument, Quellcode).
