@@ -1,6 +1,6 @@
 +++
 date = '2025-10-19T18:41:56+02:00'
-title = 'Prüfung 2'
+title = 'Prüfung 2: Praxis'
 +++
 
 ## Teststufen, Testarten, Testen nach Weiterentwicklung
