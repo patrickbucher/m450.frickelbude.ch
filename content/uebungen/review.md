@@ -13,7 +13,7 @@ Dadurch sollen die Lernenden das nötige Verständnis für die Weiterentwicklung
 
 ## Artefakte und zu prüfende Aspekte
 
-Das Spiel besteht (neben einer HTML- und einer CSS-Datei) aus zwei JavaScript-Quellcodedateien, welche verschiedene Programmteilen (Methoden bzw. Funktionen) enthalten. Diese sind in folgende neun Arbeitspakete (**A** bis **I**) unterteilt:
+Das Spiel besteht (neben einer HTML- und einer CSS-Datei) aus zwei JavaScript-Quellcodedateien, welche verschiedene Programmteile (Methoden bzw. Funktionen) enthalten. Diese sind in folgende neun Arbeitspakete (**A** bis **I**) unterteilt:
 
 - `board.js`
     - **A** Konstanten `dimension, empty, one, two` und der `constructor`
