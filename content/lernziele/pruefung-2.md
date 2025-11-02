@@ -11,9 +11,30 @@ title = 'Prüfung 2: Praxis'
 1. Sie können die Begriffe _Softwarepflege_ und _Softwarewartung_ definieren, voneinander abgrenzen und erklären, warum Software überhaupt gepflegt und gewartet werden muss.
 1. Sie können die Begriffe _Regressionsfehler_ und _Regressionstest_ sowie eine Massnahme zu deren Verhinderung erklären.
 
+### Unterlagen
+
+- [Teststufen](/praxis/teststufen)
+- [Testarten](/praxis/testarten)
+- [Test nach Weiterentwicklung](/praxis/test-nach-weiterentwicklung)
+
 ## Statischer Test
 
-1. Sie können den statischen vom dynamischen Test anhand der Aspekte _Testobjekte_, _Testvorgehen, _Testzeitpunkt_ und _Testziele_ unterscheiden.
+1. Sie können den statischen vom dynamischen Test anhand der Aspekte _Testobjekte_, _Testvorgehen_, _Testzeitpunkt_ und _Testziele_ unterscheiden.
 1. Sie können die Vorteile von Reviews auf Arbeitsergebnisse und Entwicklungsprozess erklären.
 1. Sie können den Ablauf, Rollen und Arten von Reviews erklären.
 1. Sie können die Grenzen der statischen gegenüber der dynamischen Prüfung aufzeigen.
+
+### Unterlagen
+
+- [Statischer Test](/praxis/statischer-test)
+
+## Dynamischer Test
+
+- Sie können zwischen Blackbox- und Whitebox-Testverfahren unterscheiden, deren Unterschiede benennen und die Überdeckungsgrade der einzelnen Verfahren bestimmen.
+- Sie können den Begriff Äquivalenzklasse definieren, Äquivalenzklassen (gültiger und ungültiger Werte) für eine gegebene Problemstellung bilden, daraus systematisch (positive und negative) Testfälle herleiten und diese mithilfe einer Grenzwertanalyse sinnvoll ergänzen.
+- Sie können zustandsbasierte Testfälle anhand eines Zustandsautomaten oder einer Zustandstabelle definieren.
+- Sie können anhand gegebener Bedingungen eine Entscheidungstabelle aufstellen und daraus positive sowie negative Testfälle ableiten.
+
+### Unterlagen
+
+- [Dynamischer Test](/praxis/dynamischer-test)
