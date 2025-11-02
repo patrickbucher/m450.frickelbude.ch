@@ -32,8 +32,8 @@ title = 'Prüfung 2: Praxis'
 
 - Sie können zwischen Blackbox- und Whitebox-Testverfahren unterscheiden, deren Unterschiede benennen und die Überdeckungsgrade der einzelnen Verfahren bestimmen.
 - Sie können den Begriff Äquivalenzklasse definieren, Äquivalenzklassen (gültiger und ungültiger Werte) für eine gegebene Problemstellung bilden, daraus systematisch (positive und negative) Testfälle herleiten und diese mithilfe einer Grenzwertanalyse sinnvoll ergänzen.
-- Sie können zustandsbasierte Testfälle anhand eines Zustandsautomaten oder einer Zustandstabelle definieren.
-- Sie können anhand gegebener Bedingungen eine Entscheidungstabelle aufstellen und daraus positive sowie negative Testfälle ableiten.
+- Sie können zustandsbasierte Testfälle anhand eines Zustandsautomaten oder einer Zustandstabelle herleiten.
+- Sie können anhand gegebener Bedingungen eine Entscheidungstabelle aufstellen und daraus positive sowie negative Testfälle herleiten.
 
 ### Unterlagen
 
