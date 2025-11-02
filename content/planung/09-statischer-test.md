@@ -4,7 +4,7 @@ title = 'Block 9: Statischer Test'
 weight = 9
 +++
 
-Im achten Block schauen wir uns den statischen Test bzw. das Review als Qualitätssicherungsmassnahme an. Nach einem Theorieblock führen wir ein Review an einem grösseren Stück Programmcode durch, wozu wir dieses aufteilen. Die Erkenntnisse aus dem Review werden am Ende der Klasse vorgestellt.
+Im neunten Block schauen wir uns den statischen Test bzw. das Review als Qualitätssicherungsmassnahme an. Nach einem Theorieblock führen wir ein Review an einem grösseren Stück Programmcode durch, wozu wir dieses aufteilen. Die Erkenntnisse aus dem Review werden am Ende der Klasse vorgestellt.
 
 ## Ziel
 
