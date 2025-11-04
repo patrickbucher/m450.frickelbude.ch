@@ -129,7 +129,7 @@ Dieses Beispiel zeigt eine Entscheidungstabelle, welche Regeln für Lohnabzüge 
 | EO                    |  x |  x |  x |  x |  - |  - |  - |  - |
 | ALV                   |  x |  x |  ! |  - |  x |  x |  ! |  - |
 | NBU                   |  x |  x |  ! |  - |  x |  x |  ! |  - |
-| PK                    |  x |  - |  ! |  - |  x |  - |  ! |  x |
+| PK                    |  x |  - |  ! |  - |  x |  - |  ! |  - |
 
 Die Erfüllung der Bedingungen ist oben rechts mit «w» (wahr) und «f» (falsch) angegeben. Die erwarteten Ergebnisse sind unten rechts mit «x» (erwartet), «-» (nicht erwartet) und «!» (widersprüchliche Bedingungen) angegeben.
 
