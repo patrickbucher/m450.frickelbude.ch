@@ -112,6 +112,12 @@ export function solve(a: number, b: number, c: number): Array<number> {
 
 **Auftrag**: Speichere diesen Code in einer Datei namens `quadratic_equation.ts` ab. Ermittle nun die drei nötigen Testfälle (d.h. Wertkombinationen für die Parameter `a`, `b` und `c`), um eine vollständige Codeüberdeckung zu erreichen. Erstelle nun automatisch ausführbare Testfälle in `quadratic_equation_test.ts`, führe sie aus und miss deren Codeüberdeckung.
 
+## Zusatzfrage
+
+Die erste Aufgabe (Fibonacci) verwendet JavaScript, die zweite Aufgabe (quadratische Gleichungen) jedoch TypeScript. Mit Deno lässt sich beides ohne Zwischenschritte ausführen.
+
+**Frage**: Welchen Einfluss hat die Wahl der Sprache auf die Testfallermittlung, -umsetzung und Codeüberdeckung?
+
 ## Othello
 
 Bei den Aufgaben zur [Äquivalenzklassenbildung](/uebungen/blackbox-testverfahren/#äquivalenzklassenbildung) und [Grenzwertanalyse](/uebungen/blackbox-testverfahren/#grenzwertanalyse) vom vergangenen Übungsblock hast du automatisch ausführbare Testfälle mit Deno geschrieben.
