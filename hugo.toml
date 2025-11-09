@@ -6,7 +6,7 @@ title = 'Modul 450: Applikationen testen'
 minifyOutput = true
 
 [params]
-math.disable = true
+math.disable = false
 openapi = false
 showVisitedLinks = true
 themeVariant = 'zen-light'

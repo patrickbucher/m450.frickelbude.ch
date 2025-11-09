@@ -34,6 +34,9 @@ title = 'Prüfung 2: Praxis'
 - Sie können den Begriff Äquivalenzklasse definieren, Äquivalenzklassen (gültiger und ungültiger Werte) für eine gegebene Problemstellung bilden, daraus systematisch (positive und negative) Testfälle herleiten und diese mithilfe einer Grenzwertanalyse sinnvoll ergänzen.
 - Sie können zustandsbasierte Testfälle anhand eines Zustandsautomaten oder einer Zustandstabelle herleiten.
 - Sie können anhand gegebener Bedingungen eine Entscheidungstabelle aufstellen und daraus positive sowie negative Testfälle herleiten.
+- Sie können Testfälle systematisch anhand des zu testenden Quellcodes und der relevanten Metrik (geforderte Anweisungs- oder Zweigüberdeckung) ermitteln.
+- Sie können den Zusammenhang und Unterschied zwischen Anweisungs- und Zweigüberdeckung mithilfe eines Flussdiagramms erklären.
+- Sie können den Nutzen und das Vorgehen der erfahrungsbasierten Testfallermittlung erklären.
 
 ### Unterlagen
 
