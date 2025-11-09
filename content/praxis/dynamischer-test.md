@@ -137,6 +137,81 @@ Pro Spalte der Wirkungsmatrix soll ein Testfall erstellt werden, der überprüfe
 
 Die Testüberdeckung ergibt sich aus dem Verhältnis der erstellten Testfälle zur Anzahl Spalten in der Wirkungsmatrix. Entscheidungstabellen sind ein systematisches Verfahren zur Ermittlung der Testfälle. Deren Anzahl wächst dabei exponentiell zur Anzahl der zu prüfenden Bedingungen an. Nach der Eliminierung redundanter Kombinationen kann und sollte die Anzahl der Testfälle durch Reduktionen (z.B. risikobasiert) weiter verkleinert werden.
 
+## Whitebox-Testverfahren
+
+Bei Whitebox-Testverfahren werden die Testfälle aus der Struktur des Quellcodes abgeleitet, der hierzu bereits geschrieben sein muss. Der Programmcode soll bis zu einem angestrebten Grad durch Testfälle überdeckt werden. In der Praxis wird zunächst der Überdeckungsgrad der Blackbox-Tests gemessen und dann gezielt durch ergänzende Whitebox-Tests erhöht.
+
+Whitebox-Tests kommen v.a. auf der Stufe der Komponententests zum Einsatz. Neben dem Quellcode dient auch die Spezifikation der zu prüfenden Komponente als Testbasis, welche zur Festlegung der Erwartungswerte und zum Erkennen fehlerhaften Verhaltens herangezogen wird. 
+
+Man unterscheidet beim Whitebox-Test u.a. zwischen _Anweisungstest_ und _Zweigtest_ (oder _Entscheidungstest_). Diese beiden Verfahren werden anhand eines Programmbeispiels zur Berechnung der Fakultät (engl. «factorial») demonstriert, wobei der folgende Programmcode (in JavaScript) auch als Flussdiagramm veranschaulicht ist:
+
+```javascript
+function factorial(x) {
+  if (typeof x === "number") {
+    if (x == 0) {
+      return 1;
+    } else if (x > 1) {
+      let i = x - 1;
+      do {
+        x *= i;
+        i -= 1;
+      } while (i > 0);
+    }
+  }
+  return x;
+}
+```
+
+![Das Flussdiagramm zur Funktion _factorial_ zur Berechnung der Fakultät](/img/flussdiagramm.svg)
+
+### Anweisungstest und Anweisungsüberdeckung
+
+Beim Anweisungstest geht es darum, möglichst viele Anweisungen im Programmcode durch Testfälle erreichen zu können. Dabei wird ein bestimmtes Mindestverhältnis von überdeckten Anweisungen zur Gesamtzahl von Anweisungen angestrebt.
+
+Im Flussdiagramm sind die Anweisungen als Knoten und der Programmfluss als Kanten dargestellt, wobei zwischen Verzweigungen (Kreise) und sonstigen Instruktionen (Rechtecke) unterschieden wird.
+
+Im vorliegenden Beispiel sind zwei Testfälle nötig, um einen Überdeckungsgrad von 100% zu erreichen: Der erste muss der Bedingung `x == 0` und der zweite der Bedingung `x > 0` genügen, was beispielsweise mit den Eingabeparametern `0` und `3` erreicht werden kann: Der erste Testfall erreicht die Anweisung `return 1`, während der zweite die `do`/`while`-Schleife erreicht und (mehrmals) durchlaufen lässt.
+
+Der Testfall darf sich dabei nicht mit dem Durchlaufen der Anweisungen begnügen, sondern muss auch das Ergebnis gemäss Spezifikation überprüfen (z.B. `factorial(0) == 1` und `factorial(3) == 6` gemäss der mathematischen Definition `0! = 1` und `3! = 6`).
+
+Ein Überdeckungsgrad von 100% ist ‒ mit Ausnahme von trivialen Beispielen, wie der vorliegenden Fakultät-Berechnung ‒ in der Praxis oft schwer zu erreichen, da Anweisungen zur Ausnahmebehandlung teilweise sehr umständlich zur Ausführung gebracht werden können.
+
+Gar nicht zu erreichende Anweisungen sind ein Hinweis auf «toten Code» (engl. «dead code»), dessen Entfernung geprüft werden soll. Das Erreichen der `else`-Zweige, die im vorliegenden Beispiel über keine Anweisungen verfügen, ist nicht Gegenstand des Anweisungstests.
+
+### Zweigtest und Zweigüberdeckung
+
+Stehen beim Anweisungstest die Anweisungen (Knoten im Flussdiagramm) im Fokus, sind es beim Zweigtest die Verzweigungen (Kanten im Flussdiagramm). Bei Abfrage- (`if`/`else if`/`else`, `switch`/`case`) und Schleifenanweisungen (`do`/`while`, `for`) sind die dort getroffenen Entscheidungen über den weiteren Kontrollfluss die Grundlage der Überlegungen.
+
+Im Gegensatz zum Anweisungstest sind auch «leere» Zweige ohne Anweisungen zu überdecken; es müssen sämtliche Kanten im Flussdiagramm durchlaufen werden! Genügen beim Anweisungstest noch zwei Testfälle (`x = 0` und `x = 3`) um einen Überdeckungsgrad von 100% zu erreichen, müssen im Zweigtest auch die beiden «leeren» Zweige geprüft werden. (Diese werden ausgeführt, wenn `x` nicht numerisch ist bzw. den Wert `1` hat.)
+
+Die Zweigüberdeckung ist das Verhältnis der ausgeführten Zweige zur Gesamtzahl der vorhandenen Zweige. Hierbei ist daraf zu achten, dass im Flussdiagramm ersichtliche Zweige teilweise (wie im vorliegenden Beispiel) nicht im Programmcode ersichtlich sind.
+
+Eine Zweigüberdeckung von 100% garantiert auch eine Anweisungsüberdeckung von 100% ‒ was umgekehrt jedoch nicht gilt! Bei beiden Testverfahren ‒ Anweisungstest und Zweigtest ‒ sind Werkzeuge zur Messung der Codeüberdeckung eine unverzichtbare Unterstützung zur effizienten Ermittlung des erreichten Überdeckungsgrades.
+
+## Erfahrungsbasierte Testfallermittlung
+
+Die erfahrungsbasierte Testfallermittlung nutzt die Kenntnisse und die Intuition der Tester und ist eine sinnvolle Ergänzung zu den systematischen Testverfahren. Überdeckungsgrade sind dabei sekundär bzw. kaum messbar.
+
+Neben dem Erfahrungs- und Fachwissen aus dem Softwaretest sind auch Kenntnisse aus vergleichbaren Vorgängerprojekten und Erfahrungen mit dort eingesetzten Programmiersprachen und Technologien hilfreich. Dieses Vorgehen ist wenig methodisch und basiert darauf, in früheren Projekten aufgedeckte Fehlerwirkungen erneut zu provozieren sowie auf Erfahrungswerten, welche Fehlhandlungen oft im jeweiligen Umfeld zu beobachten sind, wie z.B. fehlende Eingabeprüfungen oder falsche Formatierungen von Werten.
+
+Die auf der Intuition basierte Testfallermittlung wird oft auch als «error guessing» bezeichnet. Dieses Vorgehen kann etwas methodischer ausgestaltet werden, wenn die beobachteten Fehlerwirkungen und ihre Ursachen systematisch gesammelt und beim Testen abgearbeitet und ergänzt werden.
+
+Der _checklistenbasierte Test_ basiert auf einer Sammlung von Aspekten, die beim Testen berücksichtigt werden sollen. Solche Checklisten können laufend ‒ erfahrungsbasiert ‒ ergänzt werden. Auf automatisch testbare Aspekte soll dabei verzichtet werden, da die manuelle Abarbeitung solcher Tests ineffizient ist und zuverlässiger mithilfe von Testskripts vonstatten geht.
+
+Checklisteneinträge sind oft als Fragen formuliert, welche sich auf verschiedene Qualitätskriterien beziehen. Checklisten können auch in funktionale und nicht funktionale Aspekte aufgeteilt werden. Aufgrund hinzugefügter bzw. entfernter Funktionalität im Testobjekt oder aufgrund häufiger bzw. seltener auftretender Fehlhandlungen sollen Checklisten laufend um neue Einträge ergänzt bzw. um obsolete Einträge gekürzt werden.
+
+Die generische Formulierung der Checklisteneinträge führt zu einer hohen Variabilität in der Testausführung ‒ und damit zu einer höheren Abdeckung bei geringerer Wiederholbarkeit. Eine Überdeckung kann als Verhältnis abgearbeiteter zur Gesamtzahl vorhandener Checklisteneinträge angegeben werden.
+
+Ist die Testbasis veraltet bzw. gar nicht vorhanden, oder ist die zum Testen verfügbare Zeit sehr knapp bemessen, muss man sich oftmals mit einem rein _explorativen Test_ begnügen. Dieses Verfahren basiert auf der Intuition und profitiert von fachspezifischen Kenntnissen wie auch allgemeinen Fähigkeiten (Kreativität, Neugier, analytische Fähigkeiten) der involvierten Tester.
+
+Beim explorativen Test werden sämtliche Testaktivitäten parallel ausgeführt; eine Testplanung ist nicht vorgesehen. Das Testobjekt wird intuitiv erforscht und dabei dessen zu Beginn unbekanntes Verhalten schrittweise ergründet. Dieses Verfahren kann auch als Grundlage für nachfolgende systematische Testaktivitäten dienen, sofern hierfür Ressourcen zur Verfügung stehen.
+
+Das explorative Testen wird oft zeitlich begrenzt im Rahmen einzelner Sitzungen (von i.d.R. maximal zwei Stunden) durchgeführt und dabei pragmatisch dokumentiert, wobei ergänzend eine Nachbesprechung (auch in einem erweiterten interessierten Personenkreis) zum Verbreiten des erlangten Erfahrungswissens sinnvoll sein kann.
+
+Ein explorativer Test wird vorgängig sinnvollerweise mit einer «Test-Charta» auf zu testende Aspekte wie angestrebte Testziele, relevante Teile des Testobjekts, zu suchende Fehlerwirkungen usw. eingegrenzt. Beim explorativen Test ergibt sich ein «mentales Modell» von der Funktionsweise des Testobjekts, das im weiteren Verlauf der Testaktivitäten verfeinert wird.
+
+Diese beschriebenen erfahrungsbasierten Testverfahren lassen sich nicht eindeutig den Blackbox- oder Whitebox-Verfahren zuordnen und kommen v.a. ergänzend auf den höheren Teststufen zum Einsatz. Überdeckungselemente und Endkriterien lassen sich dabei nur angeben, wenn die Testaktivitäten durch abzuarbeitende Listen eingegrenzt sind. Die Effektivität dieser Verfahren hängt stark vom eingesetzten Testpersonal und von dessen Erfahrung und Kenntnissen ab.
+
 ## Fragen
 
 1. Äquivalenzklassen
@@ -148,3 +223,12 @@ Die Testüberdeckung ergibt sich aus dem Verhältnis der erstellten Testfälle z
     1. Welchen Einfluss hat die Wahl des Programmierparadigmas (objektorientiert, funktional) auf die Menge der zustandsbasierten Testfälle?
 4. Entscheidungstabellentest
     1. Wie kann die Anzahl der Testfälle beim Entscheidungstabellentest reduziert werden?
+5. Anweisungstest und Anweisungsüberdeckung
+    1. Welcher wichtige Aspekt des Testens kann vergessen gehen, wenn man sich auf die Überdeckung von Anweisungen konzentriert?
+    2. Warum ist ein Überdeckungsgrad von 100% schwierig bis gar nicht erreichbar?
+6. Zweigtest und Zweigüberdeckung
+    1. Welchen Aspekt vom Programmablauf, der im Quellcode kaum oder gar nicht erkennbar ist, macht ein Flussdiagramm sichtbar?
+    2. Warum garantiert eine Zweigüberdeckung von 100% auch eine Anweisungsüberdeckung von 100%, aber nicht umgekehrt?
+7. Erfahrungsbasierte Testfallermittlung
+    1. Welche Erfahrungen können beim Ermitteln von Testfällen nützlich sein?
+    2. Wovon hängt der Nutzen erfahrungsbasierten Testens v.a. ab?
