@@ -18,7 +18,6 @@ Sie können Testfälle systematisch zum Erreichen einer gewünschten Anweisungs-
 - [15 min.] Präsentation einzelner Hausaufgaben
 - [25 min.] Theorie zu [Whitebox-Testverfahren](/praxis/dynamischer-test/#whitebox-testverfahren) und zu [erfahrungsbasierter Testfallermittlung](/praxis/dynamischer-test/#erfahrungsbasierte-testfallermittlung)
 - [45 min.] Arbeit an der Übung zu [Whitebox-Testverfahren](/uebungen/whitebox-testverfahren/)
-    - währenddessen: Prüfungsbesprechungen
 
 ### Hausaufgaben
 
