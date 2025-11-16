@@ -128,3 +128,15 @@ Es gibt verschiedene Frameworks bzw. Libraries, welche einem den Umgang mit Test
 Im Rahmen von diesem Modul sollen diese jedoch nicht zum Einsatz kommen. Stattdessen sollen die zugrundeliegenden Mechanismen durch eigene Implementierungen eingeübt werden.
 
 Beim Einsatz von Test Doubles lohnt sich die Messung der Testabdeckung. Setzt man Test Doubles wahllos und unreflektiert ein, werden die Testfälle schon bald wenig aussagekräftig, da diese nur noch die Test Doubles und nicht mehr den eigentlichen Produktivcode ausführen.
+
+## Fragen
+
+1. Warum gibt es oft mehr Integrations- als Komponententests?
+2. Was sind die Vor- und Nachteile von Integrations- gegenüber Komponententests?
+3. Welchen Vorteil schafft Dependency Injection und welche Nachteile bringt es mit sich?
+4. Wann hat die Verwendung von Komposition keinen negativen Effekt auf die Testbarkeit?
+5. Warum sollte ein Dummy Exceptions werfen?
+6. Warum sind Fakes aufwändig zu implementieren?
+7. Was ist der Unterschied zwischen Stub und Fake?
+8. Wozu protokolliert ein Mock Methodenaufrufe?
+9. Warum ist ein Spy strenggenommen _kein_ Test Double?
