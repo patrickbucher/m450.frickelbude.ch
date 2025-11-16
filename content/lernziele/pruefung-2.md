@@ -41,3 +41,14 @@ title = 'Prüfung 2: Praxis'
 ### Unterlagen
 
 - [Dynamischer Test](/praxis/dynamischer-test)
+
+## Test Doubles
+
+- Sie können mögliche Probleme erklären, die beim Testen einer Klasse mitsamt ihrer Abhängigkeiten auftreten können, und diese Probleme mithilfe von _Test Doubles_ lösen.
+- Sie können das Konzept der _Dependency Injection_ erklären und es auf gegebenen Programmcode (gekoppelte Klassen) anwenden.
+- Sie können verschiedene Arten von _Test Doubles_ (_Dummy_, _Fake_, _Stub_, _Mock_, _Spy_) voneinander unterscheiden, die Rahmenbedingungen für ihren Einsatz bestimmen und Test Doubles für eine gegebene Problemstellung implementieren.
+- Sie können den Unterschied zwischen _Aggregation_ und _Komposition_ und die Konsequenz davon auf die Testbarkeit erklären.
+
+### Unterlagen
+
+- [Test Doubles](/praxis/test-doubles)
