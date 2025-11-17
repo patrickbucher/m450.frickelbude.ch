@@ -24,7 +24,7 @@ Integrationstests haben gegenüber Komponententests einige Nachteile. Sie sind:
 
 ## Problem: Mittesten integrierter Komponenten
 
-Betrachten wir hierzu ein Beispiel: Eine übergeordnete Komponente `Major` verwendet eine untergeordnete Komponente `Minor`. Zu jeder der beiden Kompnenten gibt es einen Testfall: `MajorTest` (Integrationstest) und `MinorTest` (Komponententest).
+Betrachten wir hierzu ein Beispiel: Eine übergeordnete Komponente `Major` verwendet eine untergeordnete Komponente `Minor`. Zu jeder der beiden Komponenten gibt es einen Testfall: `MajorTest` (Integrationstest) und `MinorTest` (Komponententest).
 
 {{< figure src="/img/major-minor.svg" width="450" alt="Die Komponente Major verwendet die Komponente Minor" >}}
 
