@@ -14,10 +14,8 @@ Sie können Klassen zwecks verbesserter Testbarkeit mittels Dependency Injection
 ### Lektionen 1 & 2
 
 - [5 min.] Administratives
-- [15 min.] Präsentation einzelner Hausaufgaben
-    - Frage: "Wie konnte ich die Testabdeckung mithilfe von Whitebox-Testverfahren erhöhen?"
-- [30 min.] Theorie zu [Test Doubles](/praxis/test-doubles)
-- [40 min.] Arbeit an der Übung zu [Test Doubles](/uebungen/test-doubles)
+- [40 min.] Theorie zu [Test Doubles](/praxis/test-doubles)
+- [45 min.] Arbeit an der Übung zu [Test Doubles](/uebungen/test-doubles)
 
 ### Hausaufgaben
 
