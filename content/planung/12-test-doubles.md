@@ -1,6 +1,7 @@
 +++
 date = '2025-11-16T23:00:55+01:00'
 title = 'Block 12: Test Doubles'
+weight = 12
 +++
 
 Im zwölften Block befassen wir uns mit _Test Doubles_ (Dummies, Fakes, Stubs, Mocks und Spies), womit sich aus Integrationstests Komponententests machen lassen. Nach einem Theorieblock mit einem Exkurs zum Thema Dependency Injection und Klassenbeziehungen üben wir verschiedene Arten von Test Doubles anhand eines Beispiels ein.

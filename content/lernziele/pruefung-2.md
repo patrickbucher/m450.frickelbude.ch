@@ -52,3 +52,12 @@ title = 'Prüfung 2: Praxis'
 ### Unterlagen
 
 - [Test Doubles](/praxis/test-doubles)
+
+## Separation of Concerns
+
+- Sie können das Konzept der _Separation of Concerns_ (SoC) und die Auswirkungen davon auf die Testbarkeit von Programmcode erklären.
+- Sie können gegebenen Programmcode auf die Separation of Concerns analysieren und Verbesserungsvorschläge dafür ausdenken und umsetzen.
+
+### Unterlagen
+
+- [Separation of Concerns](/praxis/separation-of-concerns)
