@@ -19,6 +19,7 @@ Sie verstehen das Konzept der _Separation of Concerns_, können Programmcode dan
 - [10 min.] Betrachtung eines [Codebeispiels](/codebeispiele/#ein-c-programm)
 - [25 min.] Lektüre zur [Separation of Concerns](/praxis/separation-of-concerns)
 - [45 min.] Arbeit an den [Übungen](/uebungen/separation-of-concerns)
+    - währenddessen: Einzelbesprechung Hausaufgaben
 
 ### Hausaufgaben
 
