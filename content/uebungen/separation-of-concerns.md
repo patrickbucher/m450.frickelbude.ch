@@ -55,7 +55,9 @@ In der Spielshow _Monty Hall_ bekommen die Teilnehmer drei Tore zur Auswahl: Hin
 
 Nachdem der Spieler sich für ein Tor entscheidet, lässt Monty Hall jeweils ein anderes Tor öffnen, hinter welchem sich eine Ziege verbirgt. Der Spieler hat nun die Möglichkeit seine Wahl zu ändern oder bei der ursprünglichen Wahl zu bleiben.
 
-Das _Monty-Hall-Problem_ lautet folgendermassen: _Verbessern sich durch das Wechseln der Wahl die Gewinnchancen?_
+Das _Monty-Hall-Problem_ lautet folgendermassen: 
+
+> Verbessern sich durch das Wechseln der Wahl die Gewinnchancen?
 
 Im gegebenen Code wird versucht, die Frage mittels einer Simulation zu lösen.  Hierbei wird eine gegebene Anzahl von Spielen gespielt. Dabei wird ausgerechnet, wie oft der Spieler gewinnen würde wenn er:
 
