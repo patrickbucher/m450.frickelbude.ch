@@ -7,7 +7,7 @@ weight = 12
 Das Repository [separation-of-concerns](https://github.com/patrickbucher/separation-of-concerns/) beinhaltet drei Beispiele mit je drei Quellcodedateien:
 
 1. `*.ts`: Die Programmbibliothek mit jeweils einer Funktion, welche die eigentliche Logik enthält.
-2. `*_demo.ts`: Ein Demoprogramm, welches die jeweilige Funktion aufruft.
+2. `*_main.ts`: Ein Demoprogramm, welches die jeweilige Funktion aufruft.
 3. `*_test.ts`: Ein Dummy-Testfall als Vorlage.
 
 ## Auftrag
