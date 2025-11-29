@@ -1,7 +1,6 @@
 +++
 date = '2025-11-28T14:29:42+01:00'
 title = 'Debugging'
-draft = true
 +++
 
 > If debugging is the process of removing software bugs, then programming must be the process of putting them in.
@@ -36,7 +35,7 @@ Tritt ein Fehler auf, neigen unerfahrene Programmierer oft dazu der Programmiers
 Es bleibt nichts anderes übrig, als zu versuchen von der Fehlerfolge zu dessen Ursache vorzudringen, indem man die Ausführung des Codes und alle darin involvierten Variablen zurückverfolgt. Die einzige Gewissheit ist, _dass_ der Fehler aufgetreten ist. Zur Fehlerfindung sind folgende Techniken hilfreich:
 
 - **Auf bekannte Muster achten**: Kommt einem die Fehlerfolge bereits bekannt vor (z.B. ein `null`-Pointer), dürfte man auch der Ursache für den Fehler schon einmal begegnet sein (z.B. eine uninitialisierte Variable).
-- **Die letzte Änderung inspizieren**: Was wurde am Programm geändert, seitdem es noch funktioniert hat? Der neue Code wird wohl Teil des Problems sein. Der Vergleich zu einer früheren Version könnte helfen; eine Versionskontrolle ist hierbei nützlich.
+- **Die letzte Änderung inspizieren**: Was wurde am Programm geändert, seitdem es das letzte Mal funktioniert hat? Der neue Code wird wohl Teil des Problems sein. Der Vergleich zu einer früheren Version könnte helfen; eine Versionskontrolle ist hierbei nützlich.
 - **Den gleichen Fehler nicht zweimal machen**: Hat man einen Fehler behoben, soll man sich überlegen, ob man ihn nicht woanders auch begangen haben könnte.  Gibt es ähnliche Codepassagen, die man sich noch einmal genauer anschauen sollte?
 - **Debugging ‒ jetzt, nicht später**: Stösst man auf einen Fehler, sollte man diesem direkt nachgehen. Vielleicht wird er nicht mehr so schnell auftauchen ‒ bis er plötzlich schwerwiegende Folgen hat! So musste ders _Mars Pathfinder_ einmal täglich neugestartet werden, weil die Entwickler beim ursprünglichen Entdecken des Fehlers gerade womit anders beschäftigt waren.
 - **Eine Stack-Trace erhalten**: Eine Stack-Trace mit exakten Zeilenangaben des aufgetretenen Fehlers ist eine der wichtigsten Quellen bei der Fehlersuche.  Unwahrscheinliche Argumentwerte (`null`; riesige Integer, wenn kleine erwartet werden; eigenartige Zeichen in Strings) können auch gute Hinweise liefern.
@@ -65,13 +64,13 @@ Sind diese Tipps nicht hilfreich, wird es Zeit das Programm Schritt für Schritt
 
 Kann der Fehler auch mit dem Debugger nicht gefunden werden, sollte man eine Pause einlegen und sich mit etwas anderem beschäftigen. Die Lösung kann einem dann plötzlich einfallen.
 
-Hat sich vielleicht etwas an der Umgebung geändert, wodurch der Fehler plötzlich aufgetreten ist? Tritt der Fehler auch auf anderen Umgebungen auf? Ist vielleicht sogar der Compiler oder Interpreter des Programms fehlerhaft? Die Fehlersuche sollte niemals hier beginnen, kann aber in Ausnahmefällen hier enden! Memory-Leaks, nicht geschlossene File-Deskriptoren oder volle Partitionen können auch zu Fehlern führen.
+Hat sich vielleicht etwas an der Umgebung geändert, wodurch der Fehler plötzlich aufgetreten ist? Tritt der Fehler auch in anderen Umgebungen auf? Ist vielleicht sogar der Compiler oder Interpreter des Programms fehlerhaft? Die Fehlersuche sollte niemals hier beginnen, kann aber in Ausnahmefällen hier enden! Memory-Leaks, nicht geschlossene File-Deskriptoren oder volle Partitionen können auch zu Fehlern führen.
 
 ## Nicht-reproduzierbare Fehler
 
 Kann ein Fehler nicht zuvelässig reproduzierbar gemacht werden, kann dies ein Hinweis auf seine Ursache sein. Vielleicht wird die Programmausführung von Änderungen in der Umgebung beeinflusst.
 
-Nicht initialisierte Variablen können zu eigenartigen Effekten führen. Verändert sich das Fehlerverhalten durch das Hinzufügen von Debugging-Anweisungen, kann der Fehler mit der Zuweisung von Arbeitsspeicher zusammenhängen. Funktioniert das Programm auf einer Umgebung aber nicht auf einer anderen, ist der Fehler eher an der Umgebung als am Programm zu suchen.
+Nicht initialisierte Variablen können zu eigenartigen Effekten führen. Verändert sich das Fehlerverhalten durch das Hinzufügen von Debugging-Anweisungen, kann der Fehler mit der Zuweisung von Arbeitsspeicher zusammenhängen. Funktioniert das Programm in einer Umgebung aber nicht in einer anderen, ist der Fehler eher in der Umgebung als am Programm zu suchen.
 
 ## Die Fehler Anderer
 
@@ -82,3 +81,11 @@ Textsuchen und das Ausführen des Codes mit dem Debugger können dabei helfen di
 Hat man keinen Zugriff auf den fehlerbehafteten Code, muss man das Auftauchen des Fehlers so gut wie möglich dokumentieren und zurückmelden. Gleichzeitig sollte man einen _Workaround_ finden, um das Problem vorerst vermeiden zu können. Bevor man einen Fehler zurückmeldet, sollte man sich vergewissern, dass es sich wirklich um einen Fehler handelt, damit man nicht die Zeit des anderen Programmierers verschwendet.
 
 Wurde der gleiche Fehler vielleicht schon einmal gemeldet? Gibt es vielleicht schon eine neuere Version, bei welcher der Fehler bereits behoben worden ist?  Meldet man einen Fehler, sollte man dessen Reproduzierbarkeit anhand eines möglichst minimalen Beispiels demonstrieren.  Zusatzinformationen zur Umgebung (Betriebssystem, Versionen) sind auch hilfreich.
+
+## Fragen
+
+1. Wozu verleiten Debugger?
+2. Warum sollte man den Code zuerst lesen bevor man Korrekturen daran ausprobiert?
+3. Wie lässt sich eine _binäre Suche_ auf Testdaten und Programmcode anwenden?
+4. Welcher Vorteil hat die Ausführung mit dem Debugger gegenüber dem reinen Durchlesen des Codes?
+5. Worauf können häufige Änderungen am selben Codeabschnitt hinweisen?
