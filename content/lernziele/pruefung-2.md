@@ -61,3 +61,14 @@ title = 'Prüfung 2: Praxis'
 ### Unterlagen
 
 - [Separation of Concerns](/praxis/separation-of-concerns)
+
+## Debugging
+
+- Sie können die Vor- und Nachteile bei der Arbeit mit dem Debugger benennen.
+- Sie können Debugging-Techniken und -Hilfsmittel erklären und anwenden.
+- Sie können nachvollziehen, warum ein Debugger nicht das erste sondern eher das letzte Mittel bei der Fehlerbehebung sein sollte.
+- Sie können erklären, warum ein Fehler zuerst zuverlässig nachvollziehbar gemacht werden soll, bevor man diesen behebt.
+
+### Unterlagen
+
+- [Debugging](/praxis/debugging)
