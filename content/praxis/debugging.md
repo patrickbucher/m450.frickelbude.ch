@@ -23,7 +23,7 @@ Gutes Design, guter Programmierstil, Wertebereichsprüfungen, defensives Program
 
 ## Debugger
 
-Viele Programmiersprachen und Entwicklungsumgebungen verfügen über Debugging-Werkzeuge. Diese erlauben das Zeilen- oder funktionsweise Abarbeiten von Code, das Anhalten an bestimmten Punkten und die Inspektion der Variablen zur Laufzeit. Gute Debugger sind ein mächtiges Werkzeug in den Händen fähiger Anwender.
+Viele Programmiersprachen und Entwicklungsumgebungen verfügen über Debugging-Werkzeuge. Diese erlauben das zeilen- oder funktionsweise Abarbeiten von Code, das Anhalten an bestimmten Punkten und die Inspektion der Variablen zur Laufzeit. Gute Debugger sind ein mächtiges Werkzeug in den Händen fähiger Anwender.
 
 Debugger stehen jedoch nicht in allen Umgebungen zur Verfügung oder sind bei gewissen Programmierproblemen (nebenläufige, verteilte Systeme) wenig hilfreich.  Ausserdem verleiten Debugger zum planlosen schrittweisen Ausführen von Code und Inspizieren von Datenstrukturen, ohne dass man weiss, wonach man eigentlich sucht. Geht man bei einer Debugging-Sitzung einen Schritt zu weit, muss man von neuem anfangen. Einfache `print`-Anweisungen verbleiben jedoch im Code und können iterativ verbessert werden. Oftmals ist es effizienter, zuerst über mögliche Fehlerursachen nachzudenken und diese durch gezielten Einsatz des
 Debuggers zu prüfen.
