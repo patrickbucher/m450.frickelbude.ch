@@ -1,6 +1,7 @@
 +++
 date = '2025-11-28T14:29:42+01:00'
 title = 'Debugging'
+weight = 8
 +++
 
 > If debugging is the process of removing software bugs, then programming must be the process of putting them in.
