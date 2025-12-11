@@ -49,7 +49,7 @@ Das Skript soll den Server selbständig im Hintergrund starten und nach erfolgte
 
 Nimm das Testskript `server-test.sh` in dein Repository auf.
 
-## Aufgabe 5: Währungsrechner erweitern
+## Zusatzaufgabe (TDD): Währungsrechner erweitern
 
 Der Währungsrechner kann nur zwischen zwei Währungen umrechnen, wenn deren direkter Wechselkurs bekannt ist. Angenommen es sind folgende Wechselkurse hinterlegt:
 
