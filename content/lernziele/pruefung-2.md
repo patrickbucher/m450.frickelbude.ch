@@ -72,3 +72,11 @@ title = 'Prüfung 2: Praxis'
 ### Unterlagen
 
 - [Debugging](/praxis/debugging)
+
+## Testwerkzeuge & Schnittstellentests
+
+- Sie können die Werkzeuge `curl`, `jq`, `bash` und `awk` für einfache Schnittstellentests verwenden und erklären, welches Werkzeug welchen Zweck erfüllt.
+
+### Unterlagen
+
+- [Testwerkzeuge](/praxis/testwerkzeuge)
