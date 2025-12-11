@@ -6,7 +6,12 @@ weight = 9
 
 Für den Systemtest kommen oft spezielle Testwerkzeuge zum Einsatz, deren Einsatz mithilfe von Skripts automatisiert wird. Dabei werden Testwerkzeuge nicht nur aufgerufen, sondern auch deren Ergebnis überprüft. Kommen zum Testen von REST-APIs oft `curl` und `jq` zum Einsatz, lassen sich textuelle Ausgaben sehr einfach mit `awk` auswerten und überprüfen.
 
-Diese Seite bietet eine kurze und pragmatische Einführung in verschiedene Testwerkzeuge, womit sich einfache Systemtests mit wenig Aufwand aber effektiv automatisieren lassen.
+Diese Seite bietet eine kurze und pragmatische Einführung in verschiedene Testwerkzeuge, womit sich einfache Systemtests mit wenig Aufwand aber effektiv automatisieren lassen:
+
+- [curl](#curl)
+- [jq](#jq)
+- [Bash](#bash)
+- [AWK](#awk)
 
 ## curl
 
@@ -14,13 +19,13 @@ Das Kommandozeilenprogramm `curl` kann u.a. HTTP-Anfragen an Server stellen, wom
 
 Ein `GET`-Request lässt sich anhand einer URL stellen:
 
-```bash
+```plain
 curl http://localhost:8080/path/to/resource
 ```
 
 Eine von `GET` abweichende HTTP-Methode lässt sich mit dem Parameter `-X` definieren. Bei `POST`-Anfragen wird jeweils ein Payload mit einem entsprechenden `Content-Type` als Header mitgegeben:
 
-```bash
+```plain
 curl -X POST -H 'Content-Type: application/json' -d @payload.json http://localhost:8080/path/to/resource
 ```
 
@@ -28,31 +33,75 @@ Das `@` vor dem Dateinamen gibt an, dass der _Inhalt_ der Datei (und nicht deren
 
 Bietet der Server _Basic Authentication_ an, können Benutzername und Passwort bequem über die Syntax `username:password` mitgegeben werden:
 
-```bash
+```plain
 curl -X PUT -u john-doe:topsecret http://localhost:8080/path/to/resource
 ```
 
 Bietet der Server die Antwort in verschiedenen Formaten an, kann das gewünschte Format über den `Accept`-Header gewählt werden:
 
-```bash
+```plain
 curl -H 'Accept: application/json' http://localhost:8080/path/to/resource
 ```
 
-### jq
+Die [umfassende Dokumentation](https://curl.se/docs/) enthält viele weitere nüzliche Informationen zum Umgang mit `curl`.
+
+## jq
 
 Das Werkzeug [`jq`](https://jqlang.org/) erlaubt es, Daten aus JSON-Datenstrukturen zu extrahieren. Es wird oft im Zusammenhang mit `curl` verwendet, wenn die HTTP-Anfrage JSON zurückliefert.
 
+Unter Windows lässt sich `jq` am einfachsten per Winget installieren:
+
+```plain
+winget install jqlang.jq
+```
+
 Die einfachste Verwendung ist die formatierte Ausgabe von JSON:
 
-```bash
+```plain
 curl -H 'Accept: applicaton/json' http://localhost:8000/path/to/resource | jq
 ```
 
-TODO: weitere Anwendungen beschreiben, z.B. einzelne Felder selektieren mit `.field`, Array-Zugriff mit `.[]` (?) usw.
+Mit der Syntax `.field` kann ein bestimmtes Feld aus einem JSON-Objekt extrahiert werden:
 
-## Bash-Kochbuch
+```plain
+$ echo '{ "firstName": "Joe", "lastName": "Doe", "age": 37 }' | jq '.firstName'
+"Joe"
+```
 
-Die folgenden "Rezepte" orientieren sich an den obenstehenden Aufgabenstellungen und funktionieren für Bash (wie z.B. für die [Git-Bash](https://git-scm.com/download/win)).
+Mit dem Parameter `-r` werden keine umschliessenden `"` ausgegeben:
+
+```plain
+$ echo '{ "firstName": "Joe", "lastName": "Doe", "age": 37 }' | jq -r '.firstName'
+Joe
+```
+
+Mit der Syntax `.[]` werden die Elemente aus einem Array herausgelöst:
+
+```plain
+$ echo '[{"x":1,"y":2},{"x":3,"y":4}]' | jq '.[]'
+{
+  "x": 1,
+  "y": 2
+}
+{
+  "x": 3,
+  "y": 4
+}
+```
+
+Auf die einzelnen Elemente kann dann wiederum mit der Syntax `.field` zugegriffen werden:
+
+```plain
+$ echo '[{"x":1,"y":2},{"x":3,"y":4}]' | jq '.[].x'
+1
+3
+```
+
+Das [jq Manual](https://jqlang.org/manual/) beschreibt viele weitere nützliche Techniken im Umgang mit JSON-Datenstrukturen.
+
+## Bash
+
+Die folgenden "Rezepte" funktionieren für Bash (wie z.B. für die [Git-Bash](https://git-scm.com/download/win)).
 
 ### Here Documents
 
@@ -257,7 +306,7 @@ qux || baz
 
 Die Variable `$?` erhält den Wert `0`, wenn mindestens eines der Programme `qux` oder `baz` erfolgreich ausgeführt worden ist. Scheitert `qux`, wird `baz` ausgeführt; `$?` hat den Exit-Code von `baz`.
 
-## AWK-Kochbuch
+## AWK
 
 AWK ist eine schlanke Programmiersprache zum Verarbeiten tabularer Daten (sprich Dateien, die in Zeilen und Spalten aufgeteilt sind). Das AWK-Skript `foo.awk` kann folgendermassen auf die Datei `numbers.txt` angewendet werden:
 
