@@ -1,12 +1,54 @@
 +++
 date = '2025-12-07T16:14:08+01:00'
-title = 'Bash und AWK'
+title = 'Testwerkzeuge'
 weight = 9
 +++
 
-Für den Systemtest kommen oft spezielle Testwerkzeuge zum Einsatz, deren Einsatz mithilfe von Skripts automatisiert wird. Dabei werden Testwerkzeuge nicht nur aufgerufen, sondern auch deren Ergebnis überprüft. Kommt zum Testen von REST-APIs oft `curl` zum Einsatz, lassen sich textuelle Ausgaben sehr einfach mit `awk` auswerten und überprüfen.
+Für den Systemtest kommen oft spezielle Testwerkzeuge zum Einsatz, deren Einsatz mithilfe von Skripts automatisiert wird. Dabei werden Testwerkzeuge nicht nur aufgerufen, sondern auch deren Ergebnis überprüft. Kommen zum Testen von REST-APIs oft `curl` und `jq` zum Einsatz, lassen sich textuelle Ausgaben sehr einfach mit `awk` auswerten und überprüfen.
 
-Diese Seite bietet eine kurze und pragmatische Einführung in die Skriptsprachen Bash und AWK, womit sich einfache Systemtests mit wenig Aufwand aber effektiv automatisieren lassen.
+Diese Seite bietet eine kurze und pragmatische Einführung in verschiedene Testwerkzeuge, womit sich einfache Systemtests mit wenig Aufwand aber effektiv automatisieren lassen.
+
+## curl
+
+Das Kommandozeilenprogramm `curl` kann u.a. HTTP-Anfragen an Server stellen, womit sich auch eine REST-API testen lässt. Die folgenden Beispiele gehen davon aus, dass auf `localhost` auf Port `8000` eine REST-API läuft.
+
+Ein `GET`-Request lässt sich anhand einer URL stellen:
+
+```bash
+curl http://localhost:8080/path/to/resource
+```
+
+Eine von `GET` abweichende HTTP-Methode lässt sich mit dem Parameter `-X` definieren. Bei `POST`-Anfragen wird jeweils ein Payload mit einem entsprechenden `Content-Type` als Header mitgegeben:
+
+```bash
+curl -X POST -H 'Content-Type: application/json' -d @payload.json http://localhost:8080/path/to/resource
+```
+
+Das `@` vor dem Dateinamen gibt an, dass der _Inhalt_ der Datei (und nicht deren Namen) dem Request mitgeschickt werden soll.
+
+Bietet der Server _Basic Authentication_ an, können Benutzername und Passwort bequem über die Syntax `username:password` mitgegeben werden:
+
+```bash
+curl -X PUT -u john-doe:topsecret http://localhost:8080/path/to/resource
+```
+
+Bietet der Server die Antwort in verschiedenen Formaten an, kann das gewünschte Format über den `Accept`-Header gewählt werden:
+
+```bash
+curl -H 'Accept: application/json' http://localhost:8080/path/to/resource
+```
+
+### jq
+
+Das Werkzeug [`jq`](https://jqlang.org/) erlaubt es, Daten aus JSON-Datenstrukturen zu extrahieren. Es wird oft im Zusammenhang mit `curl` verwendet, wenn die HTTP-Anfrage JSON zurückliefert.
+
+Die einfachste Verwendung ist die formatierte Ausgabe von JSON:
+
+```bash
+curl -H 'Accept: applicaton/json' http://localhost:8000/path/to/resource | jq
+```
+
+TODO: weitere Anwendungen beschreiben, z.B. einzelne Felder selektieren mit `.field`, Array-Zugriff mit `.[]` (?) usw.
 
 ## Bash-Kochbuch
 
