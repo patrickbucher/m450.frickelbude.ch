@@ -6,7 +6,7 @@ weight = 14
 
 ## Aufgabe 1: Testwerkzeuge kennenlernen
 
-Mache dich mit den verschiedenen [Testwekzeugen](/praxis/testwerkzeuge) vertraut, indem du versuchst die Beispiele nachzuvollziehen.
+Mache dich mit den verschiedenen [Testwerkzeugen](/praxis/testwerkzeuge) vertraut, indem du versuchst die Beispiele nachzuvollziehen.
 
 ## Aufgabe 2: Währungsrechner kennenlernen
 

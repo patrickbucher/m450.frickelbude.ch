@@ -18,7 +18,7 @@ Sie können End-to-End-Tests (d.h. Schnittstellentests) mithilfe einfacher Testw
 
 - [5 min.] Administratives
 - [20 min.] Präsentation einzelner Hausaufgaben
-- [75 min.] Arbeit an den [Übungen](/uebungen/testwerkzeuge)
+- [65 min.] Arbeit an den [Übungen](/uebungen/testwerkzeuge)
 
 ### Hausaufgaben
 
