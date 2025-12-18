@@ -1,6 +1,7 @@
 baseURL = 'https://m450.frickelbude.ch'
 languageCode = 'de-ch'
 title = 'Modul 450: Applikationen testen'
+enableEmoji = true
 
 [minify]
 minifyOutput = true
