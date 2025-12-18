@@ -14,7 +14,7 @@ weight = 8
 
 ---
 
-Der folgende Text ist eine auszugsweise Zusammenfassung vom 5. Kapitel des Buches _The Practice of Programming_ von Brian Kernighan und Rob Pike aus dem Jahr 1999.  Viele der Ratschläge sind unabhängig von der Technologie und darum zeitlos.
+Der folgende Text ist eine auszugsweise Zusammenfassung vom 5. Kapitel des Buches _The Practice of Programming_ von Brian Kernighan und Rob Pike aus dem Jahr 1999. Viele der Ratschläge sind unabhängig von der Technologie und darum zeitlos.
 
 ---
 
