@@ -81,7 +81,9 @@ title = 'Prüfung 2: Praxis'
 
 - [Testwerkzeuge](/praxis/testwerkzeuge)
 
-## Performance (nur INA23a)
+## Performance
+
+_nur für die Klasse INA23a relevant_
 
 - Du kannst die Grundsätze der Performance-Optimierung (wann und wie) erklären und begründen.
 - Du kannst erklären, welche Rolle Zeitmessungen, Profiling, Compiler-Optimierungen und Regressionstests bei der Performance-Optimierung spielen.
