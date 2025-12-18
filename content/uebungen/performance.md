@@ -4,9 +4,7 @@ title = 'Performance'
 weight = 15
 +++
 
-Die folgenden Aufgaben sollen mit mit dem Repository [performance-tests](https://github.com/patrickbucher/performance-tests) bearbeitet werden. Die Beispiele liegen dieses Mal in JavaScript (und nicht wie üblich in TypeScript) vor, un ein direktes Ausführen mit Deno _und_ Node.js (zwecks Profiling) zu ermöglichen.
-
-## Aufgabe 0: Vorbereitung
+## Vorbereitung
 
 Kopiere folgenden Beispielcode, welcher die ersten 40 Fibonacci-Zahlen rekursiv berechnet, in eine Datei namens `fib.js` ein:
 
@@ -100,4 +98,6 @@ export function fib(n) {
 
 Führe erneut ein Profiling und ein Benchmarking durch. Sowohl der Flamegraph als auch die Benchmarking-Ergebnisse sollten neu ein komplett anderes Bild ergeben.
 
-## Aufgabe 1: TODO
+## Aufgaben
+
+Die folgenden Aufgaben sollen mit mit dem Repository [performance-tests](https://github.com/patrickbucher/performance-tests) bearbeitet werden. Die Beispiele liegen dieses Mal in JavaScript (und nicht wie üblich in TypeScript) vor, um ein direktes Ausführen mit Deno _und_ Node.js (zwecks Profiling) zu ermöglichen.
