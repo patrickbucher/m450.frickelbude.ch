@@ -83,9 +83,11 @@ Werden die Funktionen `factorize` und `primes_up_to` jeweils 100 mal aufgerufen 
 
 Ist nun der Hot Spot ermittelt, gibt es folgende Möglichkeiten: Man macht die Funktion schneller, man ruft die Funktion weniger oft auf oder man löst die Funktion auf und integriert ihre Logik in den aufrufenden Code.
 
-Soll die Funktion schneller gemacht werden, sollte man zuerst prüfen, ob ein effizienterer Algorithmus für das Problem existiert. Andernfalls kann der bestehende Algorithmus durch Optimierungen (wie z.B. durch das Caching von Ergebnissen oder mithilfe paralleler Abarbeitung) versucht werden schneller zu machen. Hierbei ist es wichtig, dass man die Laufzeit nach jeder Änderung misst. Manche vermeintliche Optimierung macht den Code bloss noch langsamer.
+Soll die Funktion schneller gemacht werden, sollte man zuerst prüfen, ob ein effizienterer Algorithmus für das Problem existiert. Möglicherweise lässt sich das Problem auch durch eine geeignetere Datenstruktur ausdrücken, was den Algorithmus vereinfacht.
 
-Oftmals sind nach zwei, drei Iterationen sämtliche Hot Spots eliminiert – und das Programm arbeitet nun wesentlich schneller.
+Andernfalls kann der bestehende Algorithmus durch Optimierungen (wie z.B. durch das Caching von Ergebnissen oder mithilfe paralleler Abarbeitung) versucht werden schneller zu machen. Hierbei ist es wichtig, dass man die Laufzeit nach jeder Änderung misst – und natürlich sämtliche Regressionstests laufen lässt. Manche vermeintliche Optimierung macht den Code bloss noch langsamer oder gar fehlerhaft.
+
+Oftmals sind nach zwei, drei Iterationen sämtliche Hot Spots eliminiert – und das Programm arbeitet dann wesentlich schneller.
 
 ## Compiler-Optimierungen
 
