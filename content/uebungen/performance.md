@@ -111,17 +111,45 @@ Gehe für jede Aufgabe (Beispiel: `foo`) folgendermassen vor:
 6. Stelle sicher, dass die bestehenden Testfälle auch für die neue Implementierung funktionieren.
 7. Wiederhole die Schritte von 3 bis 7, bis du über eine performantere Implementierung verfügst.
 
-### Aufgabe 1: Mengen
+Für aussagekräftige Benchmarks müssen möglicherweise die Testdaten erweitert werden. Wichtig: Die Tests müssen immer fehlerfrei durchlaufen!
+
+### :green_circle: Aufgabe 1: Mengen
 
 In `sets.js` sind zwei Funktionen implementiert:
 
-- `unique`: Gibt ein Array zurück, das alle Elemente aus dem übergebenen Array genau einmal, d.h. ohne Duplikate, enthält.
-- `diff`: Bildet die Differenz aus den beiden übergebenen Arrays: Die Elemente der ersten Liste, die nicht in der zweiten Liste vorkommen.
+1. `unique`: Gibt ein Array zurück, das alle Elemente aus dem übergebenen Array genau einmal, d.h. ohne Duplikate, enthält.
+2. `diff`: Bildet die Differenz aus den beiden übergebenen Arrays: Die Elemente der ersten Liste, die nicht in der zweiten Liste vorkommen.
 
 Diese beiden Operationen arbeiten auf Arrays. Effizienter wären wohl Implementierungen mithilfe von einem `Set`. Wichtig: Die Schnittstelle darf nicht geändert werden. Es müssen weiterhin Arrays erwartet und zurückgegeben werden.
 
-### Aufgabe 2: Buchstabenhäufigkeit
+### :yellow_circle: Aufgabe 2: Buchstabenhäufigkeit
 
-### Aufgabe 3: Spam-Erkennung
+In `frequency.js` ist die Funktion `letterFrequency` implementiert, welche die Buchstabenhäufigkeit in einem Text zurückgibt. Die Funktion gibt ein Array von Objekten bestehend aus einem Buchstaben und dessen Häufigkeit zurück. Dabei wird _nicht_ zwischen Gross- und Kleinbuchstaben unterschieden.
 
-### Aufgabe 4: Primzahlen und Primzahl-Faktorisierung
+Die Funktion könnte effizienter implementiert werden. Hier sind zwei Ideen dazu:
+
+1. Zähle die Buchstaben mithilfe einer Map (Key: Buchstabe, Value: Buchstabenhäufigkeit) und wandle diese Map am Ende der Funktion in ein Array um.
+2. Zähle die Buchstaben in einem Array von 26 Elementen, wobei die Häufigkeit von `'a'` mit dem Element an Index 0 und `'z'` mit dem Element an Index 25 gezählt wird. (Tipp: Nutze die Differenz zum Buchstaben `'a'` um den Array-Index zu finden.)
+
+### :red_circle: Aufgabe 3: Spam-Erkennung
+
+In `spam.js` ist eine einfache Spam-Erkennung implementiert. Die Funktion `classify` nimmt einen Text entgegen und berechnet das Verhältnis von verdächtigen Spam-Wörtern zur Gesamtzahl an Wörtern im Text. Probiere folgende Optimierungen aus:
+
+1. Wird das Programm schneller, wenn der reguläre Ausdruck ausserhalb der Schleife erzeugt wird?
+2. Gruppiere die Spam-Wörter in einer Map nach ihrem Anfangsbuchstaben (Key: Anfangsbuchstabe, Value: Array von Wörtern mit diesem Anfangsbuchstaben.) Für jedes Wort im Text müssen nun nur noch die Wörter mit dem passenden Anfangsbuchstaben überprüft werden.
+
+### :black_circle: Aufgabe 4: Primzahlen und Primzahl-Faktorisierung
+
+In `primes.js` sind zwei Funktionen implementiert:
+
+1. `findPrimes`: findet die Primzahlen bis zum angegebenen `limit`.
+2. `factorize`: zerlegt die angegebene Zahl `n` in ihre Primfaktoren.
+
+Probiere folgende Optimierungen aus:
+
+1. Prüfe in `findPrimes` für die Zahl `x` nicht für alle Zahlen von 2 bis `x` auf ihre Teilbarkeit, sondern nur bis `x/2`. (Durch eine höhere Zahl _kann_ `x` nicht restlos teilbar sein.)
+2. In `factorize` sind nicht alle Primzahlen von 2 bis `n` nötig. Es genügt die Prüfung bis zur Quadratwurzel von `n` (`sqrt(n)`). Achtung: Ist `n` selbst eine Primzahl, ist diese ihr einziger Primfaktor.
+3. Implementiere das _Sieb des Eratosthenes_ zur Findung von Primzahlen: Zur Prüfung, ob `x` eine Primzahl ist, muss diese nicht auf restlose Dividierbarkeit aller kleinerer Zahlen geprüft werden, sondern nur auf restlose Dividierbarkeit aller kleineren _Primzahlen_.
+4. Implementiere eine Klasse `PrimeCache`, welche sich alle bisher gefundenen Primzahlen bis zu einer Zahl merkt. (Die Klasse hat eine Eigenschaft für die gefundenen Primzahlen und die bisher höchste geprüfte Zahl.) Du kannst `PrimeCache` auch als [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) implementieren.
+
+Teste die Optimierungen auch mit sehr grossen Zahlen (d.h. im Milliardenbereich).
