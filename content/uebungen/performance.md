@@ -34,7 +34,6 @@ Neben einer einigermassen aktuellen Version von [Deno](https://deno.com/) von [N
 npm install -g flamebearer
 ```
 
-
 Führe dieses Program nun mit Node und dem aktivierten Profiler aus:
 
 ```bash
@@ -101,3 +100,28 @@ Führe erneut ein Profiling und ein Benchmarking durch. Sowohl der Flamegraph al
 ## Aufgaben
 
 Die folgenden Aufgaben sollen mit mit dem Repository [performance-tests](https://github.com/patrickbucher/performance-tests) bearbeitet werden. Die Beispiele liegen dieses Mal in JavaScript (und nicht wie üblich in TypeScript) vor, um ein direktes Ausführen mit Deno _und_ Node.js (zwecks Profiling) zu ermöglichen.
+
+Gehe für jede Aufgabe (Beispiel: `foo`) folgendermassen vor:
+
+1. Betrachte den Code in `foo.js` und versuche seine Funktionsweise zu verstehen.
+2. Betrachte den Testcode in `foo_test.js` und führe ihn mit `deno test foo_test.js` aus.
+3. Leite aus dem Testfall einen Benchmark ab. Verwende hierzu `Deno.bench` anstelle von `Deno.test`. Achte darauf, keinen trivialen Testfall zu nehmen, sondern einen aufwändigen. Führe den Benchmark anschliessend mit `deno bench foo_test.js` aus.
+4. Führe ein Profiling für `foo.js` durch und versuche zu ermitteln, wo sich ein Hot Spot verbirgt.
+5. Erstelle eine alternative Implementierung für die gemessene Funktion unter einem anderen Namen (z.B. `fooOptimized()` statt `foo()`).
+6. Stelle sicher, dass die bestehenden Testfälle auch für die neue Implementierung funktionieren.
+7. Wiederhole die Schritte von 3 bis 7, bis du über eine performantere Implementierung verfügst.
+
+### Aufgabe 1: Mengen
+
+In `sets.js` sind zwei Funktionen implementiert:
+
+- `unique`: Gibt ein Array zurück, das alle Elemente aus dem übergebenen Array genau einmal, d.h. ohne Duplikate, enthält.
+- `diff`: Bildet die Differenz aus den beiden übergebenen Arrays: Die Elemente der ersten Liste, die nicht in der zweiten Liste vorkommen.
+
+Diese beiden Operationen arbeiten auf Arrays. Effizienter wären wohl Implementierungen mithilfe von einem `Set`. Wichtig: Die Schnittstelle darf nicht geändert werden. Es müssen weiterhin Arrays erwartet und zurückgegeben werden.
+
+### Aufgabe 2: Buchstabenhäufigkeit
+
+### Aufgabe 3: Spam-Erkennung
+
+### Aufgabe 4: Primzahlen und Primzahl-Faktorisierung
