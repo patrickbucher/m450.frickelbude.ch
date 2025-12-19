@@ -75,7 +75,7 @@ title = 'Prüfung 2: Praxis'
 
 ## Testwerkzeuge & Schnittstellentests
 
-- Sie können die Werkzeuge `curl`, `jq`, `bash` und `awk` für einfache Schnittstellentests verwenden und erklären, welches Werkzeug welchen Zweck erfüllt.
+- Sie können die Werkzeuge `curl`, `jq` und `bash` für einfache Schnittstellentests verwenden und erklären, welches Werkzeug welchen Zweck erfüllt.
 
 ### Unterlagen
 
