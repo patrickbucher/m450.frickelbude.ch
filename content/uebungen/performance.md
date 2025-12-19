@@ -151,7 +151,7 @@ Probiere folgende Optimierungen aus:
 
 1. Prüfe in `findPrimes` für die Zahl `x` nicht für alle Zahlen von 2 bis `x` auf ihre Teilbarkeit, sondern nur bis `x/2`. (Durch eine höhere Zahl _kann_ `x` nicht restlos teilbar sein.)
 2. In `factorize` sind nicht alle Primzahlen von 2 bis `n` nötig. Es genügt die Prüfung bis zur Quadratwurzel von `n` (`sqrt(n)`). Achtung: Ist `n` selbst eine Primzahl, ist diese ihr einziger Primfaktor.
-3. Implementiere das _Sieb des Eratosthenes_ zum Finden der Primzahlen: Zur Prüfung, ob `x` eine Primzahl ist, muss diese nicht auf restlose Dividierbarkeit aller kleinerer Zahlen geprüft werden, sondern nur auf restlose Dividierbarkeit aller kleinerer _Primzahlen_.
+3. Implementiere das _Sieb des Eratosthenes_ zum Finden der Primzahlen: Zur Prüfung, ob `x` eine Primzahl ist, muss diese nicht auf restlose Dividierbarkeit durch alle kleineren Zahlen sondern nur auf restlose Dividierbarkeit durch alle kleineren _Primzahlen_ geprüft werden.
 4. Implementiere eine Klasse `PrimeCache`, welche sich alle bisher gefundenen Primzahlen bis zu einer Zahl merkt. (Die Klasse hat eine Eigenschaft für die gefundenen Primzahlen und die bisher höchste geprüfte Zahl.) Du kannst `PrimeCache` auch als [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) implementieren.
 
 Teste die Optimierungen auch mit sehr grossen Zahlen (d.h. im Milliardenbereich).
