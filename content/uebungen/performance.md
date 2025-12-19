@@ -4,9 +4,11 @@ title = 'Performance'
 weight = 15
 +++
 
+Da Performance-Optimierungen in der Praxis nur recht selten aber meist an sehr kritischen Stellen einer Software nötig ist, sollte man das Vorgehen vorher an weniger kritischen Testobjekten üben.
+
 ## Vorbereitung
 
-Kopiere folgenden Beispielcode, welcher die ersten 40 Fibonacci-Zahlen rekursiv berechnet, in eine Datei namens `fib.js` ein:
+Kopiere folgenden Beispielcode, welcher die ersten 40 Fibonacci-Zahlen rekursiv berechnet, in eine Datei namens `fib.js`:
 
 ```javascript
 export function fib(n) {
@@ -40,18 +42,18 @@ Führe dieses Program nun mit Node und dem aktivierten Profiler aus:
 node --prof fib.js
 ```
 
-Dadurch sollte im aktuellen Arbeitsverzeichnis eine Datei mit einem Namen nach dem Muster `isolate-*-v8.log` entstanden sein. Diese kann nun folgendermassen als sogenannter _Flamegraph_ betrachtet werden (wichtig: schreibe `node.exe` statt `node`!):
+Dadurch sollte im aktuellen Arbeitsverzeichnis eine Datei mit einem Namen nach dem Muster `isolate-*-v8.log` entstanden sein. Diese kann nun folgendermassen als sogenannter _Flamegraph_ betrachtet werden: (Wichtig: schreibe unter Windows `node.exe` statt `node`!)
 
 ```bash
 node.exe --prof-process --preprocess -j isolate-*-v8.log | flamebearer
 ```
-Anhand dieser Grafik lässt sich der Hot Spot (die Funktion `fib`) recht einfach ausmachen:
+Anhand dieser Grafik lässt sich der Hot Spot – die Funktion `fib` – recht einfach ausmachen:
 
 ![`fib` ist wenig überraschend der Hot Spot](/performance/flamebearer-fib.png)
 
 ### Benchmarking
 
-Eine Funktion muss teilweise sehr oft aufgerufen werden, bis sich ihr Laufzeitverhalten stabilisiert – und dadurch Aussagen über seine Laufzeiteigenschaften messbar werden. Glücklicherweise verfügt Deno über eine Funktion namens `Deno.bench`, die analog zu `Deno.test` funktioniert, aber nicht nur einen Testfall ausführt, sondern auch noch die Performance des ausgeführten Codes misst.
+Eine Funktion muss teilweise sehr oft aufgerufen werden, bis sich ihr Laufzeitverhalten stabilisiert – und dadurch Aussagen über ihre Laufzeiteigenschaften messbar werden. Glücklicherweise verfügt Deno über eine Funktion namens `Deno.bench`, die analog zu `Deno.test` funktioniert, aber nicht nur einen Testfall ausführt, sondern auch noch die Performance des ausgeführten Codes misst.
 
 Kopiere folgenden Code in eine Datei namens `fib_test.js`:
 
@@ -59,7 +61,7 @@ Kopiere folgenden Code in eine Datei namens `fib_test.js`:
 import { assertEquals } from "@std/assert";
 import { fib } from "./fib.js";
 
-Deno.bench("Fibonacci", () => {
+Deno.bench("fib(30)", () => {
   assertEquals(fib(30), 832040);
 });
 ```
@@ -67,16 +69,16 @@ Deno.bench("Fibonacci", () => {
 Führe diesen Benchmark nun folgendermassen aus:
 
 ```bash
+deno init
+deno install
 deno bench fib_test.js
 ```
 
 Dabei sollte eine mit dieser vergleichbaren Ausgabe erfolgen, wobei die Zahlen natürlich abweichen können:
 
-```plain
-| benchmark   | time/iter (avg) |        iter/s |      (min … max)      |      p75 |      p99 |     p995 |
-| ----------- | --------------- | ------------- | --------------------- | -------- | -------- | -------- |
-| Fibonacci   |         11.2 ms |          89.3 | ( 10.4 ms …  13.4 ms) |  11.5 ms |  13.4 ms |  13.4 ms |
-```
+| benchmark   | time/iter (avg) |  iter/s |      (min … max)    |      p75 |      p99 |     p995 |
+| ----------- | --------------: | ------: | :-----------------: | -------: | -------: | -------: |
+| fib(30)     |          7.6 ms |   132.4 | (7.1 ms …   9.6 ms) |   7.6 ms |   9.6 ms |   9.6 ms |
 
 ### Optimierung
 
@@ -99,17 +101,17 @@ Führe erneut ein Profiling und ein Benchmarking durch. Sowohl der Flamegraph al
 
 ## Aufgaben
 
-Die folgenden Aufgaben sollen mit mit dem Repository [performance-tests](https://github.com/patrickbucher/performance-tests) bearbeitet werden. Die Beispiele liegen dieses Mal in JavaScript (und nicht wie üblich in TypeScript) vor, um ein direktes Ausführen mit Deno _und_ Node.js (zwecks Profiling) zu ermöglichen.
+Die folgenden Aufgaben sollen mit dem Repository [performance-tests](https://github.com/patrickbucher/performance-tests) bearbeitet werden. Erstelle zuerst einen Fork davon und klone diesen. Die Beispiele liegen in JavaScript (und nicht wie üblich in TypeScript) vor, um ein direktes Ausführen mit Deno (Benchmarking) _und_ Node.js (Profiling) zu ermöglichen.
 
 Gehe für jede Aufgabe (Beispiel: `foo`) folgendermassen vor:
 
 1. Betrachte den Code in `foo.js` und versuche seine Funktionsweise zu verstehen.
 2. Betrachte den Testcode in `foo_test.js` und führe ihn mit `deno test foo_test.js` aus.
-3. Leite aus dem Testfall einen Benchmark ab. Verwende hierzu `Deno.bench` anstelle von `Deno.test`. Achte darauf, keinen trivialen Testfall zu nehmen, sondern einen aufwändigen. Führe den Benchmark anschliessend mit `deno bench foo_test.js` aus.
+3. Leite aus dem Testfall einen Benchmark ab. Verwende hierzu `Deno.bench` anstelle von `Deno.test`. Achte darauf, keinen trivialen Testfall zu nehmen, sondern einen aufwändigen. Führe den Benchmark anschliessend mit `deno bench foo_test.js` aus. Erweitere die Eingabedaten falls nötig.
 4. Führe ein Profiling für `foo.js` durch und versuche zu ermitteln, wo sich ein Hot Spot verbirgt.
 5. Erstelle eine alternative Implementierung für die gemessene Funktion unter einem anderen Namen (z.B. `fooOptimized()` statt `foo()`).
-6. Stelle sicher, dass die bestehenden Testfälle auch für die neue Implementierung funktionieren.
-7. Wiederhole die Schritte von 3 bis 7, bis du über eine performantere Implementierung verfügst.
+6. Stelle sicher, dass die bestehenden Testfälle auch für die neue Implementierung funktionieren, indem du einen Testfall für die optimierte Funktion schreibst.
+7. Wiederhole die Schritte von 3 bis 6, bis du über eine performantere Implementierung verfügst – oder dir die Ideen ausgehen.
 
 Für aussagekräftige Benchmarks müssen möglicherweise die Testdaten erweitert werden. Wichtig: Die Tests müssen immer fehlerfrei durchlaufen!
 
@@ -133,7 +135,7 @@ Die Funktion könnte effizienter implementiert werden. Hier sind zwei Ideen dazu
 
 ### :red_circle: Aufgabe 3: Spam-Erkennung
 
-In `spam.js` ist eine einfache Spam-Erkennung implementiert. Die Funktion `classify` nimmt einen Text entgegen und berechnet das Verhältnis von verdächtigen Spam-Wörtern zur Gesamtzahl an Wörtern im Text. Probiere folgende Optimierungen aus:
+In `spam.js` ist eine einfache Spam-Erkennung implementiert. Die Funktion `classify` nimmt einen Text entgegen und berechnet das Verhältnis von verdächtigen Spam-Wörtern zur Gesamtzahl der Wörter im Text. Probiere folgende Optimierungen aus:
 
 1. Wird das Programm schneller, wenn der reguläre Ausdruck ausserhalb der Schleife erzeugt wird?
 2. Gruppiere die Spam-Wörter in einer Map nach ihrem Anfangsbuchstaben (Key: Anfangsbuchstabe, Value: Array von Wörtern mit diesem Anfangsbuchstaben.) Für jedes Wort im Text müssen nun nur noch die Wörter mit dem passenden Anfangsbuchstaben überprüft werden.
@@ -149,7 +151,7 @@ Probiere folgende Optimierungen aus:
 
 1. Prüfe in `findPrimes` für die Zahl `x` nicht für alle Zahlen von 2 bis `x` auf ihre Teilbarkeit, sondern nur bis `x/2`. (Durch eine höhere Zahl _kann_ `x` nicht restlos teilbar sein.)
 2. In `factorize` sind nicht alle Primzahlen von 2 bis `n` nötig. Es genügt die Prüfung bis zur Quadratwurzel von `n` (`sqrt(n)`). Achtung: Ist `n` selbst eine Primzahl, ist diese ihr einziger Primfaktor.
-3. Implementiere das _Sieb des Eratosthenes_ zur Findung von Primzahlen: Zur Prüfung, ob `x` eine Primzahl ist, muss diese nicht auf restlose Dividierbarkeit aller kleinerer Zahlen geprüft werden, sondern nur auf restlose Dividierbarkeit aller kleineren _Primzahlen_.
+3. Implementiere das _Sieb des Eratosthenes_ zum Finden der Primzahlen: Zur Prüfung, ob `x` eine Primzahl ist, muss diese nicht auf restlose Dividierbarkeit aller kleinerer Zahlen geprüft werden, sondern nur auf restlose Dividierbarkeit aller kleinerer _Primzahlen_.
 4. Implementiere eine Klasse `PrimeCache`, welche sich alle bisher gefundenen Primzahlen bis zu einer Zahl merkt. (Die Klasse hat eine Eigenschaft für die gefundenen Primzahlen und die bisher höchste geprüfte Zahl.) Du kannst `PrimeCache` auch als [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) implementieren.
 
 Teste die Optimierungen auch mit sehr grossen Zahlen (d.h. im Milliardenbereich).

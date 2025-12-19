@@ -12,11 +12,11 @@ Früher waren Computer langsam und teuer. Es lohnte sich, Aufwand in die Optimie
 
 > Thus the first principle of optimization is: _don't_.
 
-Für Programme, die selten oder nur von einem kleinen Personenkreis verwendet werden, lohnt sich eine meist zeitaufwändige, fehleranfällige und die Komplexität erhöhende Optimierung meistens nicht. Grundsätzlich soll man die einfachste mögliche Lösung verwenden, die funktioniert.
+Für Programme, die selten oder nur von einem kleinen Personenkreis verwendet werden, lohnt sich eine meist zeitaufwändige, fehleranfällige und komplexitätsverstärkende Optimierung meistens nicht. Grundsätzlich soll man die einfachste mögliche Lösung verwenden, die funktioniert.
 
 Es gibt jedoch zentrale Komponenten in einem System, deren Performance ausschlaggebend – und eine Optimierung deshalb sinnvoll ist. Hierbei ist es wichtig, dass man die tatsächliche Performance misst und nicht einfach spekuliert. Auch Regressionstests sollte man unbedingt schreiben, damit bei der Optimierung nicht Fehler eingebaut werden.
 
-Bei der Performance-Optimierung sind folgende Aspekte ausschlaggebend:
+Die Performance-Optimierung hat viele verschiedene Facetten, wovon hier einige wenige betrachet werden sollen.
 
 ## Zeitmessung
 
@@ -55,21 +55,23 @@ Date after = new Date();
 long milliseconds = after.getTime() - before.getTime();
 ```
 
+Andere Programmiersprachen verfügen über vergleichbare Mechanismen zur abschnittsweisen Zeitmessung.
+
 ## Profiling
 
 Neben einer summarischen Zeitmessung ist _Profiling_ ein wichtiges Werkzeug. Ein Profil legt dar, womit ein Programm seine Rechenzeit verbringt. Ein Profiler sammelt Informationen darüber, welche Funktionen und Anweisungen wie oft und für wie lange ausgeführt werden, bereitet diese Daten auf und gibt sie aus.
 
 Damit lassen sich sogenannte _Hot Spots_ im Programm finden: Stellen im Programm, die am meisten Rechenzeit verbrauchen. Donald Knuth hat den Begriff "Profiling" 1971 in einem Artikel eingeführt und dazu geschrieben, dass weniger als 4 Prozent des Programms mehr als die Hälfte seiner Laufzeit ausmachten.
 
-Das Beispielprogramm [`factorize.c`](/performance/factorize.c), welches Zahlen in ihre Primfaktoren zerlegt, kann beispielsweise folgendermassen einem Profiling unterzogen werden:
+Das Beispielprogramm [`factorize.c`](/performance/factorize.c), welches Zahlen in ihre Primfaktoren zerlegt, kann folgendermassen einem Profiling unterzogen werden:
 
 ```bash
 cc factorize.c -pg -g -o factorize -lm
-./factorize 999999900 999999999
+./factorize 999999900 999999999 >/dev/null
 gprof factorize gmon.out >profile.txt
 ```
 
-Der erste Befehl kompiliert das Programm mit Profiling-Informationen (`-pg`) und Debug-Symbolen (`-g`). Der zweite Befehl ruft das Programm für 100 relativ grosse Zahlen auf, wodurch die Datei `gmon.out` generiert wird. Der dritte Befehl verarbeitet diese Informationen für das kompilierte Programm `factorize` und leitet die Ausgabe in die Datei `profile.txt` um. Diese enthält u.a. folgendes:
+Der erste Befehl kompiliert das Programm mit Profiling-Informationen (`-pg`) und Debug-Symbolen (`-g`). Der zweite Befehl ruft das Programm für 100 relativ grosse Zahlen auf und ignoriert dessen Ausgaben, wobei aufgrund der Einstellung `-pg` von vorher die Datei `gmon.out` generiert wird. Der dritte Befehl verarbeitet diese Informationen für das kompilierte Programm `factorize` und leitet die Ausgabe in die Datei `profile.txt` um. Diese enthält u.a. folgendes:
 
 ```plain
   %   cumulative   self              self     total
@@ -85,7 +87,7 @@ Ist nun der Hot Spot ermittelt, gibt es folgende Möglichkeiten: Man macht die F
 
 Soll die Funktion schneller gemacht werden, sollte man zuerst prüfen, ob ein effizienterer Algorithmus für das Problem existiert. Möglicherweise lässt sich das Problem auch durch eine geeignetere Datenstruktur ausdrücken, was den Algorithmus vereinfacht.
 
-Andernfalls kann der bestehende Algorithmus durch Optimierungen (wie z.B. durch das Caching von Ergebnissen oder mithilfe paralleler Abarbeitung) versucht werden schneller zu machen. Hierbei ist es wichtig, dass man die Laufzeit nach jeder Änderung misst – und natürlich sämtliche Regressionstests laufen lässt. Manche vermeintliche Optimierung macht den Code bloss noch langsamer oder gar fehlerhaft.
+Andernfalls kann der bestehende Algorithmus durch Optimierungen (wie z.B. durch Zwischenspeichern von Ergebnissen oder mithilfe paralleler Abarbeitung) versucht werden schneller zu machen. Hierbei ist es wichtig, dass man die Laufzeit nach jeder Änderung misst – und natürlich sämtliche Regressionstests laufen lässt. Manche vermeintliche Optimierung macht den Code bloss noch langsamer oder gar fehlerhaft.
 
 Oftmals sind nach zwei, drei Iterationen sämtliche Hot Spots eliminiert – und das Programm arbeitet dann wesentlich schneller.
 
@@ -126,8 +128,9 @@ Da ein Programm aber nur einmal kompiliert und anschliessend beliebig oft ausgef
 ## Fragen
 
 1. Was können wir mit der Unterscheidung zwischen `user` und `sys` in der Ausgabe des `time`-Befehls anfangen?
-1. Was kann man machen, wenn manuelle Performance-Messungen im Code (mittels `clock`-Funktion, `date-`Klasse usw.) unmessbar kleine Ergebnisse (z.B. `0.00s`) ausgeben?
+1. Was kann man machen, wenn manuelle Performance-Messungen im Code (mittels `clock`-Funktion, `Date-`Klasse usw.) unmessbar kleine Ergebnisse (z.B. `0.00s`) ausgeben?
 1. Wie kann das _Auflösen einer Funktion_ und die _Integration deren Logik in den aufrufenden Code_ ein Programm verschnellern?
 1. Warst du schon einmal mit der Performance eines deiner Programme unzufrieden? Wenn ja:
     1. Was hast du getan, um es schneller zu machen?
     2. Wurde das Performance-Problem dadurch gelöst?
+    3. Wurde der Code dadurch performanter?

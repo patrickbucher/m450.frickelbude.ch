@@ -85,8 +85,8 @@ title = 'Prüfung 2: Praxis'
 
 _nur für die Klasse INA23a relevant_
 
-- Du kannst die Grundsätze der Performance-Optimierung (wann und wie) erklären und begründen.
-- Du kannst erklären, welche Rolle Zeitmessungen, Profiling, Compiler-Optimierungen und Regressionstests bei der Performance-Optimierung spielen.
+- Sie können die Grundsätze der Performance-Optimierung (wann und wie) erklären und begründen.
+- Sie können erklären, welche Rolle Zeitmessungen, Profiling, Compiler-Optimierungen und Regressionstests bei der Performance-Optimierung spielen.
 
 ### Unterlagen
 
