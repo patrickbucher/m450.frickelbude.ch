@@ -1,6 +1,7 @@
 +++
 date = '2025-10-19T18:41:56+02:00'
 title = 'Prüfung 2: Praxis'
+weight = 2
 +++
 
 ## Teststufen, Testarten, Testen nach Weiterentwicklung
@@ -72,22 +73,3 @@ title = 'Prüfung 2: Praxis'
 ### Unterlagen
 
 - [Debugging](/praxis/debugging)
-
-## Testwerkzeuge & Schnittstellentests
-
-- Sie können die Werkzeuge `curl`, `jq` und `bash` für einfache Schnittstellentests verwenden und erklären, welches Werkzeug welchen Zweck erfüllt.
-
-### Unterlagen
-
-- [Testwerkzeuge](/praxis/testwerkzeuge)
-
-## Performance
-
-_nur für die Klasse INA23a relevant_
-
-- Sie können die Grundsätze der Performance-Optimierung (wann und wie) erklären und begründen.
-- Sie können erklären, welche Rolle Zeitmessungen, Profiling, Compiler-Optimierungen und Regressionstests bei der Performance-Optimierung spielen.
-
-### Unterlagen
-
-- [Performance](/praxis/performance)
