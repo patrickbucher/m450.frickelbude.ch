@@ -35,7 +35,7 @@ Nicht funktionale Eigenschaften einer Komponente, z.B. deren Effizienz, können 
 
 Da der Entwickler eines Komponententests Zugriff auf den Quellcode des Testobjekts hat, spricht man von einem Whitebox-Testverfahren. Beim Testen einer Komponente kann der Entwickler somit Gebrauch von seinem Wissen über den internen Aufbau der Komponente machen, indem er z.B. Testfälle entwirft, um die Ausführung bestimmter Programmpfade zu überprüfen. In der Praxis wird der Komponententest jedoch oftmals als reiner Blackbox-Test durchgeführt, wobei die Testfälle ohne den Blick auf die innere Struktur der Komponente erstellt werden.
 
-Beim iterativen «Test-First»-Vorgehen wird zuerst ein automatischer Testfall erstellt und erst dann die gewünschte Komponente umgesetzt. Dieses Vorgehen wird wiederholt, bis die umgesetzte Komponente allen Anforderungen genügt ‒ und alle Testfälle fehlerfrei durchlaufen. Dieses Vorgehen bezeichnet man auch als «testgetriebene Entwicklung» bzw. als «Test-Driven Development» (TDD).
+Beim iterativen «Test-First»-Vorgehen wird zuerst ein automatischer Testfall erstellt und erst dann die gewünschte Komponente umgesetzt. Diese Schritte werden wiederholt, bis die umgesetzte Komponente allen Anforderungen genügt ‒ und alle Testfälle fehlerfrei durchlaufen. Man bezeichnet dieses Vorgehen auch als «testgetriebene Entwicklung» bzw. als «Test-Driven Development» (TDD).
 
 ## Integrationstest
 
