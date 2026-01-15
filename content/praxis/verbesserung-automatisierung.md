@@ -50,4 +50,4 @@ Retrospektiven können nicht nur am Ende einer Iteration (z.B. in Scrum nach ein
 4. Welche Arbeitsschritte werden bei CI/CD automatisiert?
 5. Welchen Einfluss hat die Ausführungsgeschwindigkeit automatischer Testfälle auf den Entwicklungsprozess?
 6. Welche kulturellen Veränderungen erfordert DevOps gegenüber getrennten Entwicklungs- und Betriebsprozessen?
-7. Was bringt der Blick auf die Vergangenheit (Retrospektive) für die Zukungt (Weiterentwicklung)?
+7. Was bringt der Blick auf die Vergangenheit (Retrospektive) für die Zukunft (Weiterentwicklung)?
