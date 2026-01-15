@@ -20,3 +20,13 @@ weight = 3
 ### Unterlagen
 
 - [Performance](/praxis/performance)
+
+## Verbesserung des Entwicklungsprozess und Automatisierung
+
+- Sie können die Begriffe _Test-Driven Development_ (TDD) und _Acceptance-Test-Driven Development_ (ATDD) erklären von voneinander abgrenzen.
+- Sie können die Begriffe _Continuous Integration_ (CI) und _Continuous Deployment_ (CD) erklären von voneinander abgrenzen.
+- Sie können ein vorgegebenes CI/CD-Angebot prüfen und vorstellen.
+
+### Unterlagen
+
+- [Verbesserung des Entwicklungsprozess und Automatisierung](/praxis/verbesserung-automatisierung)
