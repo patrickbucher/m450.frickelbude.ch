@@ -1,11 +1,11 @@
 +++
 date = '2026-01-14T21:53:24+01:00'
-title = 'Verbesserung und Automatisierung des Softwareentwicklungsprozesses'
+title = 'Verbesserung des Entwicklungsprozess und Automatisierung'
 +++
 
 Die kontinuierliche Verbesserung von Produkten und Dienstleistungen ist Teil des Qualitätsmanagements erfolgreicher Firmen. Entwickeln diese Firmen Software, verbessern sie auch laufend ihren Softwareentwicklungsprozess, was auf der Ebene von Projekten, Teams oder unternehmensweit passieren kann. Dies soll eine Verbesserung der Produktivität (für kürzere Iterationszyklen) und Qualität (zur besseren Fehlervermeidung) zur Folge haben.
 
-Frühes Testen ist eine wichtige Massnahme hierzu. Dabei sollen Qualitätssicherungsmassnahmen möglichst früh nach einem Arbeitsschritt ausgeführt werden, der potenziell einen Fehler produziert, um so ein schnelles Feedback zu erhalten. Reviews stellen hierzu eine wirksame Massnahme dar, wobei Arbeitsergebnsse in einer stabilen Zwischenversion einer Prüfung unterzogen werden. Dabei ist es sinnvoll, wenn Personal mit Testwissen an diesem Vorgang beteiligt ist.
+Frühes Testen ist eine wichtige Massnahme hierzu. Dabei sollen Qualitätssicherungsmassnahmen möglichst früh nach einem Arbeitsschritt ausgeführt werden, der potenziell einen Fehler produziert, um so ein schnelles Feedback zu erhalten. Reviews stellen hierzu eine wirksame Massnahme dar, wobei Arbeitsergebnisse in einer stabilen Zwischenversion einer Prüfung unterzogen werden. Dabei ist es sinnvoll, wenn Personal mit Testwissen an diesem Vorgang beteiligt ist.
 
 Statische Quallcodeanalyse, nicht funktionale Tests auf tieferen Ebenen, die testgetriebene Entwicklung (TDD) sowie _Continuous Integration_ (CI) und _Continuous Delivery_ (CD) sind weitere sinnvolle Massnahmen des frühen Testens. Die Einführung solcher Massnahmen ist v.a. wegen der Schulung der Mitarbeiter oft mit hohen Kosten verbunden, was sich aufgrund des daraus resultierenden Qualitäts- und Produktivitätsgewinns aber durchaus längerfristig lohnen kann. Ohne solche Massnahmen ist es auf Dauer gar nicht möglich, kurze Iterationen in der Entwicklung durchzuhalten.
 
