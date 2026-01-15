@@ -1,6 +1,7 @@
 +++
 date = '2026-01-14T21:53:24+01:00'
 title = 'Verbesserung des Entwicklungsprozess und Automatisierung'
+weight = 11
 +++
 
 Die kontinuierliche Verbesserung von Produkten und Dienstleistungen ist Teil des Qualitätsmanagements erfolgreicher Firmen. Entwickeln diese Firmen Software, verbessern sie auch laufend ihren Softwareentwicklungsprozess, was auf der Ebene von Projekten, Teams oder unternehmensweit passieren kann. Dies soll eine Verbesserung der Produktivität (für kürzere Iterationszyklen) und Qualität (zur besseren Fehlervermeidung) zur Folge haben.
@@ -9,7 +10,7 @@ Frühes Testen ist eine wichtige Massnahme hierzu. Dabei sollen Qualitätssicher
 
 Statische Quallcodeanalyse, nicht funktionale Tests auf tieferen Ebenen, die testgetriebene Entwicklung (TDD) sowie _Continuous Integration_ (CI) und _Continuous Delivery_ (CD) sind weitere sinnvolle Massnahmen des frühen Testens. Die Einführung solcher Massnahmen ist v.a. wegen der Schulung der Mitarbeiter oft mit hohen Kosten verbunden, was sich aufgrund des daraus resultierenden Qualitäts- und Produktivitätsgewinns aber durchaus längerfristig lohnen kann. Ohne solche Massnahmen ist es auf Dauer gar nicht möglich, kurze Iterationen in der Entwicklung durchzuhalten.
 
-### Testgetriebene Entwicklung
+## Testgetriebene Entwicklung
 
 Unter testgetriebener Entwicklung versteht man ein Vorgehen, bei dem Entwurf und Umsetzung von Testfällen der Entwicklung des Produktivcodes vorausgehen. Diese automatisierten Testfälle stehen so vor und nach jeder Veränderung zur Ausführung bereit und zeigen an, ob die jeweilige Änderung einen Fehlerzustand eingeführt und eine Fehlerwirkung hervorgebracht hat.
 
@@ -19,7 +20,7 @@ Dabei unterscheidet man zwischen der ursprünglichen Form von TDD (_Test-Driven 
 
 Beim BDD (_Behaviour-Driven Development_, d.h. verhaltensgesteuerte Entwicklung) wird das Sollverhalten mithilfe von Beispielen oder Szenarien in natürlicher Sprache formuliert und anschliessend mithilfe von speziellen Werkzeugen in automatische Testfälle übersetzt, sodass auch Nicht-Entwickler automatische Testfälle erstellen können.
 
-### Continuous Integration, Continuous Delivery, Continuous Deployment
+## Continuous Integration, Continuous Delivery, Continuous Deployment
 
 _Continuous Integration_ (CI) ist eine Entwicklungsstrategie, bei der Codeänderungen häufig, d.h. mindestens einmal täglich, integriert werden. Dadurch werden nicht am Ende einer Iteration verschiedenste Änderungen auf einmal zusammengenommen, sondern kontinuierlich ins bestehende System integriert.
 
@@ -29,14 +30,24 @@ Das frühe Testen wird dabei durch das automatische Ausführen von statischen un
 
 Das _Continuous Deployment_ (CD) ist ein konsequenter Folgeschritt, bei dem auch die Auslieferung der neuen Version automatisch stattfindet, wenn alle automatisierten Tests erfolgreich durchlaufen worden sind.
 
-### DevOps
+## DevOps
 
 Die Integration der Entwicklungs- («Development», _Dev_) und Betriebsprozesse («Operations», _Ops_) bezeichnet man als _DevOps_. Diese Integration kann nicht alleine mithilfe von Werkzeugen bewerkstelligt werden, sondern erfordert auch kulturelle Veränderungen, damit die beteiligten Teams und Abteilungen besser miteinander kooperieren.
 
 Dabei wird der CI/CD-Ansatz über die Entwicklung hinaus auf den Betrieb der Anwendung ausgedehnt, was nicht nur kürzere Iterationen beim Betrieb ermöglicht, sondern dem Entwicklungsteam auch wertvolle Informationen aus dem Betrieb der Anwendung gibt, etwa zur Performanz oder zur tatsächlichen Systemauslastung.
 
-### Retrospektiven und Prozessverbesserung
+## Retrospektiven und Prozessverbesserung
 
 Eine Retrospektive ist eine Teamsitzung, in welcher die Zielerreichung einer abgeschlossenen Iteration reflektiert wird. Dabei soll es darum gehen, mögliche Verbesserungen der Arbeitsweise vorzuschlagen und zu diskutieren. Auch Themen des Testens ‒ Verbesserung der Testbasis, Steigerung der Effektivität und Effizienz beim Testen, Einsatz der Testmittel ‒ sind Thema einer Retrospektive, wie auch Weiterbildungsmassnahmen der Teammitglieder sowie kulturelle Themen.
 
 Retrospektiven können nicht nur am Ende einer Iteration (z.B. in Scrum nach einem Sprint) sondern auch nach Abschluss eines Projekts, beim Erreichen eines Meilensteins oder einfach bei Bedarf durchgeführt werden. Wichtig ist das Festhalten der Entscheidungen und die Überprüfung der Massnahmenumsetzung nach der Retrospektive.
+
+## Fragen
+
+1. Mit welchen Testaktivitäten kann "frühes Testen" konkret umgesezt werden?
+2. Warum sind die genannten Massnahmen (TDD, CI/CD usw.) nötig, um "kurze Iterationen in der Entwicklung durchzuhalten"?
+3. TDD kommt v.a. auf Stufe Komponententests (ganz unten in der Testpyramide) zum Einsatz, während ATDD auf Stufe Abnahmetests (ganz oben in der Testpyramide) betrieben wird. Wie wird aus einem Komponententest ein Abnahmetest?
+4. Welche Arbeitsschritte werden bei CI/CD automatisiert?
+5. Welchen Einfluss hat die Ausführungsgeschwindigkeit automatischer Testfälle auf den Entwicklungsprozess?
+6. Welche kulturellen Veränderungen erfordert DevOps gegenüber getrennten Entwicklungs- und Betriebsprozessen?
+7. Was bringt der Blick auf die Vergangenheit (Retrospektive) für die Zukungt (Weiterentwicklung)?
