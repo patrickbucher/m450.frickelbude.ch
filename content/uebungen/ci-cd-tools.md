@@ -20,5 +20,6 @@ Schliesst euch gemäss Auslosung zu 2er- bzw. 3er-Gruppen zusammen. Macht euch m
 - Wie wird die Testumgebung definiert (Container, Konfiguration, vorgegebene Umgebungen)?
 - Was kann ich alles damit machen (Funktionsumfang)?
 - Wie viel kostet es?
+- Für wen ist das Angebot geeignet?
 
 Bereitet euch darauf vor, eure Lösung der Klasse in 5 Minuten kurz zu präsentieren.
