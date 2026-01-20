@@ -1,10 +1,10 @@
 +++
 date = '2026-01-18T22:28:20+01:00'
-title = 'Block 18: Modulabschluss'
-weight = 18
+title = 'Block 19: Modulabschluss'
+weight = 19
 +++
 
-Im achzehnten Block schliessen wir das Modul ab. Hierzu schauen wir uns ausstehende Präsentationen von Lernenden an, besprechen die zweite Modulprüfung und führen die Modulevaluationsumfrage durch.
+Im neunzehnten Block schliessen wir das Modul ab. Hierzu schauen wir uns ausstehende Präsentationen von Lernenden an, besprechen die zweite Modulprüfung und führen die Modulevaluationsumfrage durch.
 
 ## Ziel
 

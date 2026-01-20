@@ -1,10 +1,10 @@
 +++
 date = '2026-01-15T16:28:00+01:00'
-title = 'Block 17: Verbesserung des Entwicklungsprozess und Automatisierung'
-weight = 17
+title = 'Block 18: Verbesserung des Entwicklungsprozess und Automatisierung'
+weight = 18
 +++
 
-Im siebzehnten Block befassen wir uns mit der Frage, wie sich der Entwicklungsprozess im Hinblick auf Testaktivitäten verbessern und automatisieren lässt. Nach einem Theorieblock prüfen wir hierzu verschiedene CI/CD-Angebote.
+Im achtzehnten Block befassen wir uns mit der Frage, wie sich der Entwicklungsprozess im Hinblick auf Testaktivitäten verbessern und automatisieren lässt. Nach einem Theorieblock prüfen wir hierzu verschiedene CI/CD-Angebote.
 
 ## Ziel
 
